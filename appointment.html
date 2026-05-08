@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="assets/css/dark-theme.css">
         
         <title>Book Appointment — Eleware Accounting | Free Consultation</title>
-        <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <link rel="icon" type="image/png" href="assets/img/brand/logob.png">
     </head>
     <body>
 
@@ -190,67 +190,68 @@
                             </div>
                             <div class="col-xxl-8 col-lg-7 ps-xxl-5">
                                 <div class="appointment-form style-one bg-white pt-115 pb-120 ms-xxl-5">
-                                    <form action="#" class="contact-form style-three py-0">
+                                    <form action="#" class="contact-form style-three py-0" id="eleware-appointment-form">
                                         <h2 class="section-title style-two fw-semibold mb-35">Schedule Your Consultation</h2>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group mb-45">
-                                                    <input type="text" class="w-100 bg-transparent fs-xxl-18 text-title outline-0" placeholder="Full Name*" required>
+                                                    <input type="text" name="full_name" class="w-100 bg-transparent fs-xxl-18 text-title outline-0" placeholder="Full Name*" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group mb-45">
-                                                    <input type="email" class="w-100 bg-transparent fs-xxl-18 text-title outline-0" placeholder="Email*" required>
+                                                    <input type="email" name="email" class="w-100 bg-transparent fs-xxl-18 text-title outline-0" placeholder="Email*" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group mb-45">
-                                                    <input type="email" class="w-100 bg-transparent fs-xxl-18 text-title outline-0" placeholder="Phone Number">
+                                                    <input type="tel" name="phone" class="w-100 bg-transparent fs-xxl-18 text-title outline-0" placeholder="Phone Number">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group mb-45">
-                                                    <input type="text" class="w-100 bg-transparent fs-xxl-18 text-title outline-0" placeholder="Type Service Name*" required>
+                                                    <input type="text" name="service_name" class="w-100 bg-transparent fs-xxl-18 text-title outline-0" placeholder="Type Service Name*" required>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <h6 class="font-primary fs-18 fw-semibold mb-15">Preferred Consultation Type</h6>
                                                 <div class="service-btn-wrap d-flex flex-wrap mb-35">
                                                     <div class="service-btn">
-                                                        <input type="radio" class="custom-control-input" id="accounting_service" name="service_type" checked="">
+                                                        <input type="radio" class="custom-control-input" id="accounting_service" name="service_type" value="Virtual" checked="">
                                                         <label class="fs-xxl-18 text-title text-center w-100 d-block transition round-5" for="accounting_service">Virtual</label>
                                                     </div>
                                                     <div class="service-btn">
-                                                        <input type="radio" class="custom-control-input" id="tax_service" name="service_type">
+                                                        <input type="radio" class="custom-control-input" id="tax_service" name="service_type" value="In-person">
                                                         <label class="fs-xxl-18 text-title text-center w-100 d-block transition round-5" for="tax_service">In-person</label>
                                                     </div>
                                                     <div class="service-btn">
-                                                        <input type="radio" class="custom-control-input" id="audit_service" name="service_type">
+                                                        <input type="radio" class="custom-control-input" id="audit_service" name="service_type" value="Phone">
                                                         <label class="fs-xxl-18 text-title text-center w-100 d-block transition round-5" for="audit_service">Phone</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group mb-45">
-                                                    <input type="date" class="w-100 bg-transparent fs-xxl-18 text-title outline-0" required>
+                                                    <input type="date" name="appointment_date" class="w-100 bg-transparent fs-xxl-18 text-title outline-0" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group mb-45">
-                                                    <input type="time" class="w-100 bg-transparent fs-xxl-18 text-title outline-0" required>
+                                                    <input type="time" name="appointment_time" class="w-100 bg-transparent fs-xxl-18 text-title outline-0" required>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="form-group mb-22">
-                                                    <textarea class="w-100 bg-transparent fs-xxl-18 text-title outline-0 resize-0" placeholder="Write Additional Details"></textarea>
+                                                    <textarea name="message" class="w-100 bg-transparent fs-xxl-18 text-title outline-0 resize-0" placeholder="Write Additional Details"></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <button class="btn style-one d-flex align-items-center">
+                                                <button type="submit" id="appointment-submit-btn" class="btn style-one d-flex align-items-center">
                                                     <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon" class="d-block mx-auto"></span>
                                                     <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Make An Appointment</span>
                                                     <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon" class="d-block mx-auto"></span>
                                                 </button>
+                                                <div id="appointment-form-status" class="mt-4 fs-16 fw-semibold text-success" style="display: none;">Appointment Requested Successfully!</div>
                                             </div>
                                         </div>
                                     </form>
@@ -291,10 +292,10 @@
                                     <div class="footer-widget mb-30" data-cue="slideInLeft" data-delay="200">
                                         <h3 class="footer-widget-title fs-24 text-white mb-20">Stay Connected</h3>
                                         <p class="text-gray fs-xxl-18 mb-25">Join our newsletter and stay updated on the latest news</p>
-                                        <form action="#" class="newsletter-form style-one position-relative">
+                                        <!-- <form action="#" class="newsletter-form style-one position-relative">
                                              <input type="email" class="w-100 fs-xxl-18 text-white border-0 round-5 outline-0" placeholder="Type your email" required>
                                              <button type="submit" class="position-absolute top-0 end-0 h-100 border-0 bg-transparent"><i class="ri-send-plane-fill"></i></button>
-                                        </form>
+                                        </form> -->
                                     </div>
                                 </div>
                             </div>
@@ -354,5 +355,42 @@
         <script src="assets/js/customEase.js"></script>
         <script src="assets/js/scrollcue.min.js"></script>
         <script src="assets/js/main.js"></script>
+
+        <!-- EmailJS Integration -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init("cY4HZh98ahsbuIcn1");
+            })();
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.getElementById('eleware-appointment-form');
+                if(form) {
+                    form.addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        const statusDiv = document.getElementById('appointment-form-status');
+                        const submitBtnText = document.querySelector('#appointment-submit-btn .btn-text');
+                        
+                        submitBtnText.innerText = "Sending...";
+                        
+                        // We are using the exact same template ID since the user hasn't created a second one.
+                        emailjs.sendForm('service_5s6un2o', 'template_x1yik3d', this)
+                            .then(function() {
+                                submitBtnText.innerText = "Make An Appointment";
+                                statusDiv.style.display = "block";
+                                statusDiv.style.color = "green";
+                                statusDiv.innerText = "Appointment Requested Successfully! We will contact you to confirm.";
+                                form.reset();
+                            }, function(error) {
+                                submitBtnText.innerText = "Make An Appointment";
+                                statusDiv.style.display = "block";
+                                statusDiv.style.color = "red";
+                                statusDiv.innerText = "Failed to send request. Please try again later.";
+                                console.log('FAILED...', error);
+                            });
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
