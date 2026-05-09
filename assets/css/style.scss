@@ -2755,6 +2755,9 @@ body {
     }
 }
 .case-card {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
     &.style-one{
         padding: 28px;
         &.bg-albastor{
