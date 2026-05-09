@@ -34,6 +34,10 @@
         background-color: var(--primaryColor);
         transition: var(--transition);
     }
+    &.nav-hidden {
+        top: -150px !important;
+        transition: top 0.4s ease-in-out !important;
+    }
     .other-options{
         .option-item{
             margin-left: 10px;

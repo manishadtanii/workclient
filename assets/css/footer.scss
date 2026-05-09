@@ -4,6 +4,9 @@
 .footer-area{
     &.style-one{
         background-color: var(--primaryColor);
+        .footer-top {
+            padding-top: 60px !important;
+        }
         .footer-bottom{
             padding: 38px 0;
         }
@@ -17,6 +20,10 @@
     }
     .contact-num{
         font-size: 24px;
+        transition: color 0.3s ease;
+        &:hover {
+            color: var(--whiteColor) !important;
+        }
     }
     .footer-bottom{
         
@@ -57,12 +64,16 @@
         white-space: nowrap;
         font-weight: 700;
         font-family: var(--secondaryFont);
-        line-height: 1;
-        font-size: clamp(14.7rem, 10vw, 5rem);
-        line-height: 19vh;
+        font-size: clamp(4rem, 10vw, 10rem);
+        line-height: 1.1;
         position: relative;
         left: -5px;
         letter-spacing: 0.02em;
+        transition: transform 0.4s ease, color 0.4s ease;
+        &:hover {
+            color: var(--secondaryColor) !important;
+            transform: translateX(10px);
+        }
     }
 }
 .footer-widget{

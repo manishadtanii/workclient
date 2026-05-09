@@ -8,10 +8,26 @@
         ------------------------------------------------*/
         const getHeaderId = document.querySelector(".navbar-area");
         if (getHeaderId) {
+            let lastScrollTop = 0;
             window.addEventListener('scroll', event => {
                 const height = 150;
-                const { scrollTop } = event.target.scrollingElement;
-                document.querySelector('#navbar').classList.toggle('sticky', scrollTop >= height);
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop >= height) {
+                    document.querySelector('#navbar').classList.add('sticky');
+                } else {
+                    document.querySelector('#navbar').classList.remove('sticky');
+                    document.querySelector('#navbar').classList.remove('nav-hidden');
+                }
+
+                if (scrollTop > lastScrollTop && scrollTop > height + 200) {
+                    // Scrolling down - hide navbar
+                    document.querySelector('#navbar').classList.add('nav-hidden');
+                } else {
+                    // Scrolling up - show navbar
+                    document.querySelector('#navbar').classList.remove('nav-hidden');
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
             });
         }
 
