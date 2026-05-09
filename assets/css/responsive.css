@@ -1228,20 +1228,23 @@
   }
   .case-card-wrap.style-one .case-card {
     position: sticky;
-    top: 100px;
-    /* Fix for sticky jitter during overlap */
+    /* Staggered staircase stacking effect to prevent overlap jitter */
   }
   .case-card-wrap.style-one .case-card:nth-child(1) {
     z-index: 1;
+    top: 100px;
   }
   .case-card-wrap.style-one .case-card:nth-child(2) {
     z-index: 2;
+    top: 120px;
   }
   .case-card-wrap.style-one .case-card:nth-child(3) {
     z-index: 3;
+    top: 140px;
   }
   .case-card-wrap.style-one .case-card:nth-child(4) {
     z-index: 4;
+    top: 160px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
