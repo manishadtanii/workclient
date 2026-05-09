@@ -2701,11 +2701,6 @@ body {
   padding: 120px 0 0;
 }
 
-.case-card {
-  will-change: transform, opacity;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
 .case-card.style-one {
   padding: 28px;
 }
