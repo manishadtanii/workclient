@@ -23,7 +23,9 @@
   z-index: 999 !important;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.06);
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-  background-color: #0B1F3A;
+  background: rgba(11, 31, 58, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: var(--transition);
 }
 .navbar-area .other-options .option-item {
@@ -578,6 +580,29 @@
     visibility: visible;
   }
 }
+
+.navbar-area .navbar-brand img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.navbar-area .navbar-brand:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+.navbar-area .other-options .btn.style-one {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+.navbar-area .other-options .btn.style-one:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.navbar-area .other-options .btn.style-one:hover .btn-icon-one,
+.navbar-area .other-options .btn.style-one:hover .btn-icon-two {
+  animation: pulse-arrow 1s infinite;
+}
+@keyframes pulse-arrow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
 @media only screen and (min-width: 992px) {
   .navbar-area.style-one ul li a, .navbar-area.style-two ul li a, .navbar-area.style-three ul li a, .navbar-area.style-four ul li a {
     color: var(--titleColor);
@@ -589,15 +614,32 @@
     background-color: transparent;
   }
   .navbar-area.style-one.sticky {
-    background-color: var(--primaryColor);
+    background: rgba(11, 31, 58, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
   .navbar-area.style-one .menu > ul > li > a {
     color: var(--whiteColor);
     padding-top: 40px;
     padding-bottom: 40px;
+    position: relative;
+  }
+  .navbar-area.style-one .menu > ul > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondaryColor);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
   }
   .navbar-area.style-one .menu > ul > li > a.active, .navbar-area.style-one .menu > ul > li > a:hover {
     color: var(--secondaryColor);
+  }
+  .navbar-area.style-one .menu > ul > li > a.active::after, .navbar-area.style-one .menu > ul > li > a:hover::after {
+    transform: scaleX(1);
   }
   .navbar-area.style-two {
     background-color: transparent;
