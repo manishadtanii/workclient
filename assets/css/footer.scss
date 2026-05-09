@@ -58,8 +58,8 @@
         font-weight: 700;
         font-family: var(--secondaryFont);
         line-height: 1;
-        font-size: clamp(14.7rem, 10vw, 5rem);
-        line-height: 19vh;
+        font-size: clamp(6rem, 8vw, 3rem);
+        line-height: 12vh;
         position: relative;
         left: -5px;
         letter-spacing: 0.02em;
@@ -132,8 +132,8 @@
     }
     .footer-area{
         .logo-text {
-            font-size: clamp(5.4rem, 10vw, 5.4rem);
-            line-height: 10vh;
+            font-size: clamp(2.5rem, 8vw, 2.5rem);
+            line-height: 7vh;
             margin-bottom: 15px;
         }
     }
@@ -155,8 +155,8 @@
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .footer-area{
         .logo-text {
-            font-size: clamp(7.2rem, 10vw, 7.2rem);
-            line-height: 10.5vh;
+            font-size: clamp(3.2rem, 8vw, 3.2rem);
+            line-height: 8vh;
         }
     }
 }
@@ -169,8 +169,8 @@
             bottom: 0;
         }
         .logo-text {
-            font-size: clamp(10.2rem, 10vw, 10.2rem);
-            line-height: 16.5vh;
+            font-size: clamp(4.5rem, 8vw, 4.5rem);
+            line-height: 11vh;
         }
     }
 }
@@ -178,7 +178,7 @@
 @media only screen and (min-width: 1200px) {
     .footer-area{
         .logo-text {
-            font-size: clamp(11.8rem, 10vw, 11.8rem);
+            font-size: clamp(5.2rem, 8vw, 5.2rem);
         }
         &.style-two{
             .logo{
@@ -191,7 +191,7 @@
 @media only screen and (min-width: 1400px) {
     .footer-area{
         .logo-text {
-            font-size: clamp(14.7rem, 10vw, 14.7rem);
+            font-size: clamp(6.2rem, 8vw, 6.2rem);
         }
     }
 }
