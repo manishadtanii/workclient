@@ -209,6 +209,11 @@
         loop: true,
         speed: 1500,
         spaceBetween: 24,
+        autoplay: {
+            delay: 3200,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
         navigation: {
             nextEl: ".service-next",
             prevEl: ".service-prev",
@@ -241,16 +246,23 @@
         }
     });
 
-    /*------------------------------------------------
-              Case Study Slider
-    ------------------------------------------------*/
-	var case_slider_one = new Swiper(".case-slider-one", {
+    var serviceSliderContainer = document.querySelector(".service-slider-one");
+    if (serviceSliderContainer && typeof service_slider_one !== "undefined") {
+        serviceSliderContainer.addEventListener('mouseenter', function () {
+            service_slider_one.autoplay.stop();
+        });
+        serviceSliderContainer.addEventListener('mouseleave', function () {
+            service_slider_one.autoplay.start();
+        });
+    }
+
+    var case_slider_one = new Swiper(".case-slider-one", {
         loop: true,
         speed: 1500,
         freemode: false,
         spaceBetween: 24,
         simulateTouch: false,
-         navigation: {
+        navigation: {
             nextEl: ".case-next",
             prevEl: ".case-prev",
         },

@@ -453,12 +453,13 @@
   .move-text.style-three ul li {
     font-size: 30px;
     margin: 0 16px 0 0;
-    padding-right: 35px;
+    padding-right: 50px;
   }
   .move-text.style-three ul li:after {
     background-size: 20px;
     height: 20px;
     width: 20px;
+    right: 4px;
   }
   .service-slider-one .slider-btn .prev-btn,
   .service-slider-one .slider-btn .next-btn {

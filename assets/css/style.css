@@ -2610,34 +2610,44 @@ body {
 }
 
 .service-card.style-one {
-  padding: 50px 36px 43px;
+  padding: 40px 30px 36px;
   border-radius: 20px 20px 0 0;
-  background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
-  backdrop-filter: blur(11px);
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(16px);
   clip-path: polygon(0 0, calc(100% - 148px) 0, 100% 150px, 100% 100%, 0 100%);
-  transform: translateY(55%);
+  transform: translateY(35%);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.18);
   transition: var(--transition);
 }
 .service-card.style-one h3 {
-  margin: 45px 0 62px;
+  margin: 32px 0 28px;
   transition: var(--transition);
 }
 .service-card.style-one p {
   color: #EBF7FF;
-  margin-bottom: 45px;
+  margin-bottom: 32px;
 }
 .service-card.style-one p, .service-card.style-one .btn {
   opacity: 0;
   visibility: hidden;
   transition: var(--transition);
 }
-.service-card.style-one.active, .service-card.style-one:hover {
+.service-slider-one .swiper-slide-active .service-card.style-one,
+.service-card.style-one.active,
+.service-card.style-one:hover {
   transform: translateY(0);
 }
-.service-card.style-one.active h3, .service-card.style-one:hover h3 {
-  margin: 114px 0 20px;
+.service-slider-one .swiper-slide-active .service-card.style-one h3,
+.service-card.style-one.active h3,
+.service-card.style-one:hover h3 {
+  margin: 88px 0 20px;
 }
-.service-card.style-one.active p, .service-card.style-one.active .btn, .service-card.style-one:hover p, .service-card.style-one:hover .btn {
+.service-slider-one .swiper-slide-active .service-card.style-one p,
+.service-slider-one .swiper-slide-active .service-card.style-one .btn,
+.service-card.style-one.active p,
+.service-card.style-one.active .btn,
+.service-card.style-one:hover p,
+.service-card.style-one:hover .btn {
   opacity: 1;
   visibility: visible;
 }
@@ -2888,25 +2898,25 @@ body {
   transform: translateY(-50%);
 }
 .move-text.style-three {
-  height: 145px;
+  height: 90px;
 }
 .move-text.style-three ul li {
-  font-size: 64px;
-  margin: 0 55px 0 0;
-  padding-right: 98px;
+  font-size: 42px;
+  margin: 0 35px 0 0;
+  padding-right: 48px;
   position: relative;
 }
 .move-text.style-three ul li:after {
   position: absolute;
   top: calc(50% + 4px);
-  right: 0;
+  right: 10px;
   content: "";
   background-image: url(../img/star-white.png);
-  background-size: 50px;
+  background-size: 40px;
   background-repeat: no-repeat;
   background-position: center;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   color: var(--whiteColor);
   transform: translateY(-50%);
 }
