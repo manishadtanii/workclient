@@ -2682,12 +2682,25 @@ body {
 }
 .service-card.style-three .service-img {
   border-radius: 20px 20px 0 0;
+  height: 280px;
+  flex-shrink: 0;
 }
 .service-card.style-three .service-img img {
   border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.service-card.style-three {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .service-card.style-three .service-info {
   padding: 20px 30px 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .service-card.style-three .service-info h3 {
   margin-bottom: 16px;
