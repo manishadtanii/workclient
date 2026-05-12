@@ -804,6 +804,9 @@
   }
 }
 @media only screen and (min-width: 1400px) {
+  .navbar-area .navbar-brand img {
+    max-width: 160px;
+  }
   .navbar-area .other-options .option-item {
     margin-left: 11px;
   }

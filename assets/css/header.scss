@@ -1045,6 +1045,11 @@
 // Min width 1400px //
 @media only screen and (min-width:1400px) {
     .navbar-area{
+        .navbar-brand {
+            img {
+                max-width: 160px;
+            }
+        }
         .other-options{
             .option-item{
                 margin-left: 11px;
