@@ -112,7 +112,6 @@
             delay: 3500,
             disableOnInteraction: true
         },
-        autoHeight: true,
         pagination: {
             el: '.hero-pagination',
             type: 'fraction',
