@@ -1221,4 +1221,20 @@ input:checked + .slider:before {
     border-left: 1px solid var(--borderColor);
     color: var(--whiteColor);
   }
-}/*# sourceMappingURL=dark-theme.css.map */
+}
+
+/* Fix: Why Choose Eleware - dark theme text color for mobile */
+.theme-dark .wh-card.style-one .feature-list li,
+.theme-dark .wh-card.style-one .feature-list li.text-body,
+.theme-dark .wh-card.style-one p {
+  color: var(--darkParaColor) !important;
+}
+.theme-dark .wh-card.style-one h3,
+.theme-dark .wh-card.style-one h3.text-title {
+  color: var(--whiteColor) !important;
+}
+.theme-dark .wh-card.style-one span.text-title,
+.theme-dark .wh-card.style-one .fw-semibold.text-title {
+  color: var(--whiteColor) !important;
+}
+/*# sourceMappingURL=dark-theme.css.map */

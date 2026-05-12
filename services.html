@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="zxx">
+﻿<!DOCTYPE html>
+<html lang="en">
     <head>
-        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Link of CSS files -->
+        <meta name="description" content="Eleware Accounting Services — GST Filing, Bookkeeping, Payroll, Tax Advisory, Company Incorporation and more for Delhi NCR businesses.">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         <link rel="stylesheet" href="assets/css/scrollcue.min.css">
@@ -15,32 +13,208 @@
         <link rel="stylesheet" href="assets/css/footer.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
         <link rel="stylesheet" href="assets/css/dark-theme.css">
-        
-        <title>Eleware Accounting – Accounting & Management Consulting HTML Template</title>
+        <title>Our Services — Eleware Accounting | GST, Tax, Payroll &amp; Advisory</title>
         <link rel="icon" type="image/png" href="assets/img/brand/logotab.png">
+        <style>
+            /* ============================================
+               PREMIUM SERVICE CARDS — Eleware Accounting
+               ============================================ */
+
+            /* ---- Image wrapper with zoom + overlay ---- */
+            .svc-img-wrap {
+                position: relative;
+                overflow: hidden;
+                height: 210px;
+                flex-shrink: 0;
+            }
+            .svc-img-wrap img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+            /* Dark gradient overlay on image */
+            .svc-img-wrap::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to bottom, rgba(0,37,44,0) 40%, rgba(0,37,44,0.55) 100%);
+                pointer-events: none;
+            }
+            /* Service number badge — top-left */
+            .svc-badge {
+                position: absolute;
+                top: 16px;
+                left: 16px;
+                z-index: 2;
+                background: var(--secondaryColor, #7ED957);
+                color: #00252C;
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: 1px;
+                padding: 4px 10px;
+                border-radius: 20px;
+                line-height: 1.4;
+                text-transform: uppercase;
+            }
+
+            /* ---- Card wrapper ---- */
+            .svc-card {
+                background: #fff;
+                border-radius: 16px;
+                overflow: hidden;
+                border: 1px solid #e4eaec;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                position: relative;
+                transition: transform 0.35s ease, box-shadow 0.35s ease;
+            }
+            /* Accent top border — revealed on hover */
+            .svc-card::before {
+                content: "";
+                position: absolute;
+                top: 0; left: 0; right: 0;
+                height: 3px;
+                background: linear-gradient(90deg, #00252C, var(--secondaryColor, #7ED957));
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.4s ease;
+                z-index: 3;
+            }
+            .svc-card:hover::before { transform: scaleX(1); }
+            .svc-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 20px 50px rgba(0, 37, 44, 0.14);
+            }
+            .svc-card:hover .svc-img-wrap img { transform: scale(1.06); }
+
+            /* ---- Card body ---- */
+            .svc-card-body {
+                padding: 26px 28px 28px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            .svc-card-body h3 {
+                font-size: 19px;
+                font-weight: 700;
+                color: #00252C;
+                margin-bottom: 10px;
+                line-height: 1.35;
+            }
+            .svc-card-body p {
+                font-size: 14.5px;
+                color: #5a6a72;
+                line-height: 1.7;
+                margin-bottom: 0;
+            }
+
+            /* ---- Divider line ---- */
+            .svc-divider {
+                height: 1px;
+                background: #edf1f3;
+                margin: 18px 0;
+            }
+
+            /* ---- Bullet list — FIXED no collapse ---- */
+            .svc-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .svc-list li {
+                display: flex;
+                align-items: flex-start;
+                gap: 9px;
+                margin-bottom: 9px;
+                font-size: 13.5px;
+                color: #3d5259;
+                line-height: 1.5;
+            }
+            .svc-list li:last-child { margin-bottom: 0; }
+            .svc-list li .svc-tick {
+                flex-shrink: 0;
+                width: 16px;
+                height: 16px;
+                margin-top: 2px;
+            }
+
+            /* ---- CTA link at bottom ---- */
+            .svc-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 7px;
+                margin-top: auto;
+                padding-top: 20px;
+                font-size: 13.5px;
+                font-weight: 700;
+                color: #00252C;
+                text-decoration: none;
+                letter-spacing: 0.3px;
+                transition: color 0.25s, gap 0.25s;
+            }
+            .svc-cta .svc-cta-icon {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: #edf7e8;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 15px;
+                color: #00252C;
+                transition: background 0.25s, transform 0.25s;
+                flex-shrink: 0;
+            }
+            .svc-cta:hover { color: #7ED957; gap: 11px; }
+            .svc-cta:hover .svc-cta-icon {
+                background: #00252C;
+                color: #7ED957;
+                transform: translateX(3px);
+            }
+
+            /* ---- Section intro strip ---- */
+            .svc-section-tag {
+                display: inline-block;
+                background: #edf7e8;
+                color: #00252C;
+                font-size: 11.5px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                padding: 5px 14px;
+                border-radius: 20px;
+                margin-bottom: 16px;
+            }
+
+            /* ---- Dark mode ---- */
+            .dark-theme .svc-card { background: #042a30; border-color: #0a404a; }
+            .dark-theme .svc-card-body h3 { color: #e8f4f6; }
+            .dark-theme .svc-card-body p { color: #8aacb4; }
+            .dark-theme .svc-list li { color: #9fbec6; }
+            .dark-theme .svc-divider { background: #0d4550; }
+            .dark-theme .svc-cta { color: #e8f4f6; }
+            .dark-theme .svc-cta .svc-cta-icon { background: #0d4550; }
+        </style>
     </head>
     <body>
 
-       <!--  Preloader Start -->
+        <!-- Preloader -->
         <div class="preloader-area" id="preloader">
             <div class="spinner">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div></div><div></div><div></div><div></div><div></div>
             </div>
         </div>
-        <!--  Preloader End -->
 
-        <!-- Theme Switcher Start -->
+        <!-- Theme Switcher -->
         <div class="switch-theme-mode">
             <label id="switch" class="switch">
                 <input type="checkbox" onchange="toggleTheme()" id="slider">
                 <span class="slider round"></span>
             </label>
         </div>
-        <!-- Theme Switcher End -->
 
         <!-- Custom Cursor -->
         <div class="cursor">
@@ -50,9 +224,9 @@
 
         <div id="smooth-wrapper">
             <div id="smooth-content">
+                <div class="bg-albastor position-relative z-1">
 
-                <div class="position-relative z-1">
-                    <!-- Navbar To Start -->
+                    <!-- Navbar Top -->
                     <div class="navbar-top style-two position-relative z-2">
                         <div class="container style-two">
                             <div class="row">
@@ -65,7 +239,7 @@
                                 <div class="col-md-5">
                                     <ul class="social-profile style-two list-unstyled text-md-end text-center mb-0">
                                         <li><a href="https://www.facebook.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-facebook-fill"></i></a></li>
-                                        <li><a href="https://x.com/?lang=en" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-twitter-x-line"></i></a></li>
+                                        <li><a href="https://x.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-twitter-x-line"></i></a></li>
                                         <li><a href="https://www.linkedin.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
                                         <li><a href="https://www.instagram.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-instagram-line"></i></a></li>
                                     </ul>
@@ -73,14 +247,13 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Navbar Top End -->
 
-                    <!-- Navbar Area Start -->
+                    <!-- Navbar -->
                     <div class="navbar-area style-four position-relative z-2" id="navbar">
                         <div class="container style-two">
                             <div class="navbar-wrapper d-flex justify-content-between align-items-center">
                                 <a href="index.html" class="navbar-brand">
-                                    <img src="assets/img/brand/logow.png" alt="Logo">
+                                    <img src="assets/img/brand/logow.png" alt="Eleware Accounting">
                                 </a>
                                 <div class="menu-area mx-auto">
                                     <div class="overlay"></div>
@@ -108,7 +281,7 @@
                                     </div>
                                     <div class="option-item position-relative d-flex align-items-center">
                                         <div class="mobile-options position-relative d-lg-none me-3">
-                                            <button class="dropdown-toggle  text-center bg-transparent border-0 p-0 transition" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                            <button class="dropdown-toggle text-center bg-transparent border-0 p-0 transition" type="button" data-bs-toggle="dropdown" aria-expanded="true">
                                                 <i class="ri-more-fill"></i>
                                             </button>
                                             <div class="dropdown-menu dropdown-menu-centered mobile-option-list top-1 border-0" data-bs-popper="static">
@@ -119,289 +292,264 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <!-- <button class="search-btn border-0 rounded-circle d-flex flex-column align-items-center justify-content-center dropdown-toggle transition" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-                                            <i class="ri-search-line"></i>
-                                            <i class="ri-close-line"></i>
-                                        </button>
-                                        <div class="search-dropdown dropdown-menu dropdown-menu-right top-1 border-0" data-bs-popper="static">
-                                            <form class="search-popup position-relative" action="#">
-                                                <input type="search" class="form-control text-para" placeholder="Search Here">
-                                                <button type="submit" class="position-absolute top-0 end-0 h-100 border-0 bg-transparent d-flex flex-column align-items-center justify-content-center"><i class="ri-search-2-line"></i></button>
-                                            </form>
-                                        </div> -->
                                     </div>
                                     <div class="option-item d-lg-none">
                                         <button type="button" class="menu-mobile-trigger">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
+                                            <span></span><span></span><span></span><span></span>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Navbar Area End -->
 
-                    <!-- Breadcrumb Area Start -->
+                    <!-- Breadcrumb — same structure as about-us.html -->
                     <div class="breadcrumb-area style-one position-relative z-1">
                         <div class="br-bg img-container position-absolute top-0 start-0 w-100">
-                            <img src="assets/img/services/service-hero.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            <img src="assets/compressed-files/hero1.jpeg" alt="Services" class="w-100 h-100 object-fit-cover">
                         </div>
                         <div class="container style-one">
                             <div class="row">
                                 <div class="col-xxl-10 col-lg-8">
-                                    <h2 class="section-title style-three text-white fw-bold mb-20 reveal-text">Services</h2>
+                                    <h2 class="section-title style-three text-white fw-bold mb-20 reveal-text">Our Services</h2>
                                     <ul class="br-menu list-unstyled mb-0">
                                         <li class="fs-xxl-18"><a href="index.html">Home</a></li>
-                                        <li class="fs-xxl-18">Services</li>
+                                        <li class="fs-xxl-18">Our Services</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Breadcrumb Area End -->
+                    <!-- Breadcrumb End -->
 
-                    <!-- Service Details Section Start -->
-                    <div class="bg-albastor">
-                        <div class="service-area style-three position-relative z-1 pt-120 pb-120">
-                            <div class="container style-one">
-                                <div class="row">
-                                    <div class="col-xl-8 offset-xl-2 col-md-10 offset-md-1">
-                                        <h6 class="section-subtitle fs-18 fw-normal text-center mb-15">What We Do</h6>
-                                        <h2 class="section-title style-two text-title text-center reveal-text-right mb-40">
-                                            Comprehensive financial solutions tailored to your business needs
-                                        </h2>
-                                    </div>
+                    <!-- ===== SERVICES SECTION ===== -->
+                    <div class="pt-115 pb-90">
+                        <div class="container style-two">
+
+                            <!-- Section Heading -->
+                            <div class="row mb-60">
+                                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
+                                    <span class="svc-section-tag">What We Offer</span>
+                                    <h2 class="section-title style-one fw-semibold title-anim mb-20">
+                                        End-to-End Financial Services for Growing Indian Businesses
+                                    </h2>
+                                    <p class="fs-xxl-18">From GST compliance to strategic advisory — Eleware handles your numbers so you can focus on growth.</p>
                                 </div>
                             </div>
-                            <div class="container">
-                                <div class="row justify-content-center mb-60">
-                                    <div class="col-xl-8">
-                                        <div class="text-center">
-                                            <p class="fs-18 text-title mb-3">Vision: To become a trusted accounting partner for businesses by delivering accurate, transparent, and growth-oriented financial solutions.</p>
-                                            <p class="fs-18 text-secondary">Mission: To provide high-quality accounting, tax, and financial advisory services that help businesses grow efficiently and stay compliant.</p>
+
+                            <!-- Row 1: Cards 1–3 -->
+                            <div class="row g-4 mb-4">
+
+                                <!-- 1. Bookkeeping & Accounting -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="svc-card">
+                                        <div class="svc-img-wrap">
+                                            <span class="svc-badge">01</span>
+                                            <img src="assets/compressed-files/service-bookkeeping-accounting.png" alt="Bookkeeping &amp; Accounting">
                                         </div>
-                                    </div>
-                                </div>
-                                <!-- Row 1: 3 cards -->
-                                <div class="row justify-content-center mb-5">
-                                    <div class="col-xl-4 col-md-6 d-flex mb-45">
-                                        <div class="service-card style-three bg-white img-hover-scale round-20 w-100">
-                                            <div class="service-img img-scale overflow-hidden position-relative">
-                                                <img src="assets/img/services/service-bookkeeping-accounting.png" alt="Services" class="position-absolute top-0 start-0 w-100 h-100 transition">
-                                                <img src="assets/img/services/service-bookkeeping-accounting.png" alt="Services" class="transition">
-                                            </div>
-                                            <div class="service-info">
-                                                <h3 class="fs-24 text-title">Bookkeeping &amp; Accounting</h3>
-                                                <ul class="feature-list style-one list-unstyled mb-20">
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Daily, weekly &amp; monthly books</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Bank reconciliation &amp; ledger finalization</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Accounts payable &amp; receivable control</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-md-6 d-flex mb-45">
-                                        <div class="service-card style-three bg-white img-hover-scale round-20 w-100">
-                                            <div class="service-img img-scale overflow-hidden position-relative">
-                                                <img src="assets/compressed-files/Financial.jpeg" alt="Services" class="position-absolute top-0 start-0 w-100 h-100 transition">
-                                                <img src="assets/compressed-files/Financial.jpeg" alt="Services" class="transition">
-                                            </div>
-                                            
-                                            <div class="service-info">
-                                                <h3 class="fs-24 text-title">Financial Statement Preparation</h3>
-                                                <ul class="feature-list style-one list-unstyled mb-20">
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">P&amp;L, balance sheet &amp; cash flow statements</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Audit-ready management reports</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Clear insights for better decisions</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-md-6 d-flex mb-45">
-                                        <div class="service-card style-three bg-white img-hover-scale round-20 w-100">
-                                            <div class="service-img img-scale overflow-hidden position-relative">
-                                                <img src="assets/img/services/service-gst-filling.png" alt="Services" class="position-absolute top-0 start-0 w-100 h-100 transition">
-                                                <img src="assets/img/services/service-gst-filling.png" alt="Services" class="transition">
-                                            </div>
-                                            <div class="service-info">
-                                                <h3 class="fs-24 text-title">GST Registration &amp; Filing</h3>
-                                                <ul class="feature-list style-one list-unstyled mb-20">
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">GST registration &amp; timely return filing</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">GSTR-1/3B and 2A/2B reconciliation</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">End-to-end compliance support</li>
-                                                </ul>
-                                            </div>
+                                        <div class="svc-card-body">
+                                            <h3>Bookkeeping &amp; Accounting</h3>
+                                            <p>Accurate, real-time bookkeeping on Tally, Zoho Books, or QuickBooks. Clean books mean better decisions, easier audits, and investor-ready financials.</p>
+                                            <div class="svc-divider"></div>
+                                            <ul class="svc-list">
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Tally / Zoho / QuickBooks</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Monthly MIS Reports</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Ledger Reconciliation</span></li>
+                                            </ul>
+                                            <a href="appointment.html" class="svc-cta">
+                                                Get Started
+                                                <span class="svc-cta-icon"><i class="ri-arrow-right-line"></i></span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Row 2: 3 cards -->
-                                <div class="row justify-content-center mb-5">
-                                    <div class="col-xl-4 col-md-6 d-flex mb-45">
-                                        <div class="service-card style-three bg-white img-hover-scale round-20 w-100">
-                                            <div class="service-img img-scale overflow-hidden position-relative">
-                                                <img src="assets/compressed-files/incometax.jpeg" alt="Services" class="position-absolute top-0 start-0 w-100 h-100 transition">
-                                                <img src="assets/compressed-files/incometax.jpeg" alt="Services" class="transition">
-                                            </div>
-                                            <div class="service-info">
-                                                <h3 class="fs-24 text-title">Income Tax Filing &amp; Advisory</h3>
-                                                <ul class="feature-list style-one list-unstyled mb-20">
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">ITR filing for individuals, firms &amp; companies</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">TDS calculation, return filing &amp; certificates</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Tax planning for better savings</li>
-                                                </ul>
-                                            </div>
+                                <!-- 2. Financial Statement Preparation -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="svc-card">
+                                        <div class="svc-img-wrap">
+                                            <span class="svc-badge">02</span>
+                                            <img src="assets/compressed-files/Financial.jpeg" alt="Financial Statement Preparation">
                                         </div>
-                                    </div>
-                                    <div class="col-xl-4 col-md-6 d-flex mb-45">
-                                        <div class="service-card style-three bg-white img-hover-scale round-20 w-100">
-                                            <div class="service-img img-scale overflow-hidden position-relative">
-                                                <img src="assets/img/services/service-company-incorporation.png" alt="Services" class="position-absolute top-0 start-0 w-100 h-100 transition">
-                                                <img src="assets/img/services/service-company-incorporation.png" alt="Services" class="transition">
-                                            </div>
-                                            <div class="service-info">
-                                                <h3 class="fs-24 text-title">Company Incorporation &amp; Compliance</h3>
-                                                <ul class="feature-list style-one list-unstyled mb-20">
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Pvt Ltd / LLP registration</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">ROC compliance &amp; annual filings</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Ongoing governance support</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-md-6 d-flex mb-45">
-                                        <div class="service-card style-three bg-white img-hover-scale round-20 w-100">
-                                            <div class="service-img img-scale overflow-hidden position-relative">
-                                                <img src="assets/img/services/service-payroll.png" alt="Services" class="position-absolute top-0 start-0 w-100 h-100 transition">
-                                                <img src="assets/img/services/service-payroll.png" alt="Services" class="transition">
-                                            </div>
-                                            <div class="service-info">
-                                                <h3 class="fs-24 text-title">Payroll Management</h3>
-                                                <ul class="feature-list style-one list-unstyled mb-20">
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Salary processing &amp; payslip delivery</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Payroll reports &amp; statutory compliance</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">PF / ESI / TDS support</li>
-                                                </ul>
-                                            </div>
+                                        <div class="svc-card-body">
+                                            <h3>Financial Statement Preparation</h3>
+                                            <p>Professionally prepared P&amp;L, Balance Sheet, and Cash Flow Statements — compliant with Indian GAAP and ready for banks, investors, or auditors.</p>
+                                            <div class="svc-divider"></div>
+                                            <ul class="svc-list">
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>P&amp;L &amp; Balance Sheet</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Cash Flow Statements</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Indian GAAP Compliant</span></li>
+                                            </ul>
+                                            <a href="appointment.html" class="svc-cta">
+                                                Get Started
+                                                <span class="svc-cta-icon"><i class="ri-arrow-right-line"></i></span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Row 3: 2 cards centered -->
-                                <div class="row justify-content-center">
-                                    <div class="col-xl-4 col-md-6 d-flex mb-45">
-                                        <div class="service-card style-three bg-white img-hover-scale round-20 w-100">
-                                            <div class="service-img img-scale overflow-hidden position-relative">
-                                                <img src="assets/compressed-files/Compliance.jpeg" alt="Services" class="position-absolute top-0 start-0 w-100 h-100 transition">
-                                                <img src="assets/compressed-files/Compliance.jpeg" alt="Services" class="transition">
-                                            </div>
-                                            <div class="service-info">
-                                                <h3 class="fs-24 text-title">Compliance &amp; Audit Support</h3>
-                                                <ul class="feature-list style-one list-unstyled mb-20">
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Internal audit support &amp; data prep</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Statutory audit preparation</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Regulatory filing readiness</li>
-                                                </ul>
-                                            </div>
+                                <!-- 3. GST Registration & Filing -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="200">
+                                    <div class="svc-card">
+                                        <div class="svc-img-wrap">
+                                            <span class="svc-badge">03</span>
+                                            <img src="assets/compressed-files/service-gst-filling.png" alt="GST Registration &amp; Filing">
+                                        </div>
+                                        <div class="svc-card-body">
+                                            <h3>GST Registration &amp; Filing</h3>
+                                            <p>End-to-end GST registration, monthly/quarterly return filing (GSTR-1, GSTR-3B), ITC reconciliation, and notice handling — zero penalties, on-time.</p>
+                                            <div class="svc-divider"></div>
+                                            <ul class="svc-list">
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>GST Registration &amp; Amendments</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>GSTR-1, GSTR-3B, GSTR-9</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>ITC Reconciliation</span></li>
+                                            </ul>
+                                            <a href="appointment.html" class="svc-cta">
+                                                Get Started
+                                                <span class="svc-cta-icon"><i class="ri-arrow-right-line"></i></span>
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="col-xl-4 col-md-6 d-flex mb-45">
-                                        <div class="service-card style-three bg-white img-hover-scale round-20 w-100">
-                                            <div class="service-img img-scale overflow-hidden position-relative">
-                                                <img src="assets/img/services/service-financial-advisory.png" alt="Services" class="position-absolute top-0 start-0 w-100 h-100 transition">
-                                                <img src="assets/img/services/service-financial-advisory.png" alt="Services" class="transition">
-                                            </div>
-                                            <div class="service-info">
-                                                <h3 class="fs-24 text-title">Business Advisory &amp; Cash Flow</h3>
-                                                <ul class="feature-list style-one list-unstyled mb-20">
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Financial planning &amp; budgeting</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Cash flow management</li>
-                                                    <li class="fs-xxl-18 position-relative"><img src="assets/img/icons/check.svg" alt="Icon" class="position-absolute start-0">Cost control &amp; profitability analysis</li>
-                                                </ul>
-                                            </div>
+                                </div>
+                            </div><!-- end row 1 -->
+
+                            <!-- Row 2: Cards 4-6 -->
+                            <div class="row g-4 mb-4">
+
+                            <!-- 4. Income Tax Filing & Advisory -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="300">
+                                    <div class="svc-card">
+                                        <div class="svc-img-wrap">
+                                            <span class="svc-badge">04</span>
+                                            <img src="assets/compressed-files/incometax.jpeg" alt="Income Tax Filing &amp; Advisory">
+                                        </div>
+                                        <div class="svc-card-body">
+                                            <h3>Income Tax Filing &amp; Advisory</h3>
+                                            <p>Strategic tax planning and accurate ITR filing for individuals, firms, and companies. Maximize deductions, minimize liability — fully compliant.</p>
+                                            <div class="svc-divider"></div>
+                                            <ul class="svc-list">
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>ITR-1 to ITR-6 Filing</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>TDS Returns (24Q, 26Q)</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Tax Planning &amp; Advisory</span></li>
+                                            </ul>
+                                            <a href="appointment.html" class="svc-cta">
+                                                Get Started
+                                                <span class="svc-cta-icon"><i class="ri-arrow-right-line"></i></span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
 
-                        </div>
+                                <!-- 5. Company Incorporation & Compliance -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="svc-card">
+                                        <div class="svc-img-wrap">
+                                            <span class="svc-badge">05</span>
+                                            <img src="assets/compressed-files/service-company-incorporation.png" alt="Company Incorporation &amp; Compliance">
+                                        </div>
+                                        <div class="svc-card-body">
+                                            <h3>Company Incorporation &amp; Compliance</h3>
+                                            <p>Register your business the right way — Pvt Ltd, LLP, OPC, or Partnership. We handle MCA filings, annual ROC compliance, and all secretarial work.</p>
+                                            <div class="svc-divider"></div>
+                                            <ul class="svc-list">
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Pvt Ltd / LLP / OPC Registration</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>ROC Filings (AOC-4, MGT-7)</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Director KYC &amp; Secretarial</span></li>
+                                            </ul>
+                                            <a href="appointment.html" class="svc-cta">
+                                                Get Started
+                                                <span class="svc-cta-icon"><i class="ri-arrow-right-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 6. Payroll Management -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="svc-card">
+                                        <div class="svc-img-wrap">
+                                            <span class="svc-badge">06</span>
+                                            <img src="assets/compressed-files/service-payroll.png" alt="Payroll Management">
+                                        </div>
+                                        <div class="svc-card-body">
+                                            <h3>Payroll Management</h3>
+                                            <p>Accurate, timely payroll for your entire team — full PF, ESI, and TDS deductions handled. Salary slips, Form 16, and statutory compliance included.</p>
+                                            <div class="svc-divider"></div>
+                                            <ul class="svc-list">
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>PF, ESI &amp; TDS Compliance</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Salary Slips &amp; Form 16</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Labour Law Compliance</span></li>
+                                            </ul>
+                                            <a href="appointment.html" class="svc-cta">
+                                                Get Started
+                                                <span class="svc-cta-icon"><i class="ri-arrow-right-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end row 2 -->
+
+                            <!-- Row 3: Cards 7-8 centered -->
+                            <div class="row g-4 justify-content-center">
+
+                            <!-- 7. Compliance & Audit Support -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="200">
+                                    <div class="svc-card">
+                                        <div class="svc-img-wrap">
+                                            <span class="svc-badge">07</span>
+                                            <img src="assets/compressed-files/Compliance.jpeg" alt="Compliance &amp; Audit Support">
+                                        </div>
+                                        <div class="svc-card-body">
+                                            <h3>Compliance &amp; Audit Support</h3>
+                                            <p>Proactive compliance management and full audit support — statutory, internal, and tax audits. We prepare your books to withstand any scrutiny.</p>
+                                            <div class="svc-divider"></div>
+                                            <ul class="svc-list">
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Statutory &amp; Tax Audit Support</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Internal Audit &amp; Controls</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Notice &amp; Assessment Handling</span></li>
+                                            </ul>
+                                            <a href="appointment.html" class="svc-cta">
+                                                Get Started
+                                                <span class="svc-cta-icon"><i class="ri-arrow-right-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 8. Business Advisory & Cash Flow -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="300">
+                                    <div class="svc-card">
+                                        <div class="svc-img-wrap">
+                                            <span class="svc-badge">08</span>
+                                            <img src="assets/compressed-files/clientpartnership.jpeg" alt="Business Advisory &amp; Cash Flow">
+                                        </div>
+                                        <div class="svc-card-body">
+                                            <h3>Business Advisory &amp; Cash Flow</h3>
+                                            <p>Virtual CFO support for growing businesses — financial modelling, cash flow planning, investor-ready reports, and CA-qualified strategic guidance.</p>
+                                            <div class="svc-divider"></div>
+                                            <ul class="svc-list">
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Cash Flow &amp; Projections</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Investor-Ready Reports</span></li>
+                                                <li><img src="assets/img/icons/check.svg" alt="check" class="svc-tick"><span>Budget &amp; Cost Planning</span></li>
+                                            </ul>
+                                            <a href="appointment.html" class="svc-cta">
+                                                Get Started
+                                                <span class="svc-cta-icon"><i class="ri-arrow-right-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!-- .row end -->
+                        </div><!-- .container end -->
                     </div>
-                    </div>
-                    <!-- Service Details Section End -->
+                    <!-- ===== SERVICES SECTION END ===== -->
 
-                    <!--  Industry Category Start -->
-                    <div class="industry-area style-one position-relative bg-white z-1 ptb-120">
-                        <div class="container style-one pb-120">
-                            <div class="row">
-                                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                                    <h6 class="fs-18 font-primary fw-normal text-title text-center reveal-text-right mb-15">Industries We Serve</h6>
-                                    <h2 class="section-title style-two fw-semibold text-title text-center mb-35 reveal-text-bottom">Comprehensive financial solutions tailored to your business needs</h2>
-                                </div>
-                            </div>
-                            <div class="industry-category-wrap d-flex flex-wrap justify-content-center">
-                                <a href="services.html" class="btn style-three d-inline-flex align-items-center" data-cue="slideInLeft">
-                                    <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/healthcare.svg" alt="Icon" class="d-block mx-auto"></span>
-                                    <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Healthcare</span>
-                                    <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/healthcare.svg" alt="Icon" class="d-block mx-auto"></span>
-                                </a>
-                                <a href="services.html" class="btn style-three d-inline-flex align-items-center" data-cue="slideInLeft" data-delay="100">
-                                    <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/technology.svg" alt="Icon" class="d-block mx-auto"></span>
-                                    <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Technology</span>
-                                    <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/technology.svg" alt="Icon" class="d-block mx-auto"></span>
-                                </a>
-                                <a href="services.html" class="btn style-three d-inline-flex align-items-center" data-cue="slideInLeft" data-delay="200">
-                                    <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/charity.svg" alt="Icon" class="d-block mx-auto"></span>
-                                    <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Nonprofits</span>
-                                    <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/charity.svg" alt="Icon" class="d-block mx-auto"></span>
-                                </a>
-                                <a href="services.html" class="btn style-three d-inline-flex align-items-center"  data-cue="slideInLeft" data-delay="300">
-                                    <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/real-estate.svg" alt="Icon" class="d-block mx-auto"></span>
-                                    <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Real Estate</span>
-                                    <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/real-estate.svg" alt="Icon" class="d-block mx-auto"></span>
-                                </a>
-                                <a href="services.html" class="btn style-three d-inline-flex align-items-center"  data-cue="slideInLeft" data-delay="400">
-                                    <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/outline.svg" alt="Icon" class="d-block mx-auto"></span>
-                                    <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">E-commerce</span>
-                                    <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/outline.svg" alt="Icon" class="d-block mx-auto"></span>
-                                </a>
-                                <a href="services.html" class="btn style-three d-inline-flex align-items-center" data-cue="slideInLeft" data-delay="500">
-                                    <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/manufacturing.svg" alt="Icon" class="d-block mx-auto"></span>
-                                    <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Manufacturing</span>
-                                    <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/manufacturing.svg" alt="Icon" class="d-block mx-auto"></span>
-                                </a>
-                                <a href="services.html" class="btn style-three d-inline-flex align-items-center" data-cue="slideInLeft" data-delay="600">
-                                    <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/start-up.svg" alt="Icon" class="d-block mx-auto"></span>
-                                    <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Startups & SMEs</span>
-                                    <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/industry-icon/start-up.svg" alt="Icon" class="d-block mx-auto"></span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="container style-one">
-                            <div class="cta-box style-one position-relative z-1 overflow-hidden round-20">
-                                <img src="assets/img/cta-shape-1.png" alt="Shape" class="cta-shape-one position-absolute z-n1 bottom-0 move-right">
-                                <img src="assets/img/cta-shape-2.png" alt="Shape" class="cta-shape-two position-absolute z-n1 tp-0 move-left">
-                                <div class="row">
-                                    <div class="col-xxl-10 offset-xxl-1">
-                                        <h2 class="section-title style-two fw-semibold text-center text-white reveal-text-right mb-12">Ready To Transform Your Financial Operations?</h2>
-                                        <p class="fs-xxl-18 text-center mb-4 w-xl-75 mx-auto px-xxl-5">Schedule a free 30-minute consultation with one of our accounting professionals to discuss your specific needs.</p>
-                                    </div>
-                                </div>
-                                <div class="btn-wrap d-flex flex-wrap align-items-center justify-content-center">
-                                    <a href="contact.html" class="btn style-one d-inline-flex align-items-center">
-                                        <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><i class="ri-phone-line"></i></span>
-                                        <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Get Started Today</span>
-                                        <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><i class="ri-phone-line"></i></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--  Industry Category End -->
-                </div>
 
-                <!-- Footer Section Start -->
+
+                </div><!-- .bg-albastor end -->
+
+                <!-- Footer -->
                 <footer class="footer-area style-one">
                     <div class="container style-one">
                         <div class="footer-top pt-115">
@@ -411,15 +559,14 @@
                                         <a href="index.html" class="logo d-block mb-30">
                                             <img src="assets/img/brand/logow.png" alt="Eleware Accounting">
                                         </a>
-                                        <p class="text-gray fs-xxl-18 mb-25">Reliable accounting, compliance, and strategic advisory for growing businesses across Delhi NCR.</p>
-                                        <ul class="footer-contact list-unstyled mb-0">
-                                            <li class="fs-xxl-18 mb-2"><a href="tel:+919891464160" class="contact-num fw-bold text_secondary">+91 98914 64160</a></li>
-                                            <li class="fs-xxl-18 mb-2"><a href="mailto:info@elewareaccounting.com" class="contact-mail text-white">info@elewareaccounting.com</a></li>
-                                            <li class="fs-xxl-18">Delhi NCR, India</li>
+                                        <p class="text-gray fs-xxl-18 mb-25">Clarity in Numbers. Confidence in Growth. Trusted accounting and advisory for Delhi NCR businesses.</p>
+                                        <ul class="contact-info list-unstyled mb-0">
+                                            <li class="d-flex align-items-center mb-2"><i class="ri-phone-line text_secondary me-2"></i><a href="tel:+919891464160" class="text-gray">+91 98914 64160</a></li>
+                                            <li class="d-flex align-items-center"><i class="ri-mail-line text_secondary me-2"></i><a href="mailto:info@elewareaccounting.com" class="text-gray">info@elewareaccounting.com</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="col-xl-4 col-lg-4 col-md-6">
                                     <div class="footer-widget mb-30" data-cue="slideInLeft" data-delay="100">
                                         <h3 class="footer-widget-title fs-24 text-white mb-20">Quick Links</h3>
                                         <ul class="footer-menu style-one list-unstyled mb-0">
@@ -434,13 +581,9 @@
                                     <div class="footer-widget mb-30" data-cue="slideInLeft" data-delay="200">
                                         <h3 class="footer-widget-title fs-24 text-white mb-20">Stay Connected</h3>
                                         <p class="text-gray fs-xxl-18 mb-25">Subscribe for updates on finance, compliance, and advisory insights tailored for your business.</p>
-                                        <!-- <form action="#" class="newsletter-form style-one position-relative mb-30">
-                                            <input type="email" class="w-100 fs-xxl-18 text-white border-0 round-5 outline-0" placeholder="Type your email" required>
-                                            <button type="submit" class="position-absolute top-0 end-0 h-100 border-0 bg-transparent"><i class="ri-send-plane-fill"></i></button>
-                                        </form> -->
                                         <ul class="social-profile style-one list-unstyled d-flex align-items-center flex-wrap mb-0">
                                             <li><a href="https://www.facebook.com/" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-facebook-fill"></i></a></li>
-                                            <li><a href="https://x.com/?lang=en" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-twitter-x-line"></i></a></li>
+                                            <li><a href="https://x.com/" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-twitter-x-line"></i></a></li>
                                             <li><a href="https://www.linkedin.com/" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
                                             <li><a href="https://www.instagram.com/" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-instagram-line"></i></a></li>
                                         </ul>
@@ -448,7 +591,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-7 pe-xxl-0">
+                                <div class="col-md-7">
                                     <p class="text-gray fs-xxl-18 mb-0">Eleware is a trusted accounting and advisory firm helping businesses grow with clarity, compliance, and confidence.</p>
                                 </div>
                                 <div class="col-md-5 text-md-end text-center mt-3 mt-md-0">
@@ -458,7 +601,7 @@
                         </div>
                         <div class="footer-bottom">
                             <div class="row align-items-center">
-                                <div class="col-md-7 pe-md-0 mb-sm-10">
+                                <div class="col-md-7 mb-sm-10">
                                     <p class="copyright-text fs-xxl-18 text-md-start text-center text-gray mb-0"><i class="ri-copyright-line"></i><span class="text_secondary ms-1">Eleware Accounting</span> All Rights Reserved.</p>
                                 </div>
                                 <div class="col-md-5">
@@ -471,18 +614,17 @@
                         </div>
                     </div>
                 </footer>
-                <!-- Footer End -->                <!-- Footer End -->
 
             </div>
         </div>
+
         <!-- Back to Top -->
         <div id="progress-wrap" class="progress-wrap style-one">
             <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-              <path id="progress-path" d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                <path id="progress-path" d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
             </svg>
         </div>
 
-        <!-- Link of JS files -->
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/megamenu.js"></script>
         <script src="assets/js/swiper-bundle.min.js"></script>
@@ -497,13 +639,3 @@
         <script src="assets/js/main.js"></script>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
