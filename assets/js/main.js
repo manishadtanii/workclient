@@ -211,7 +211,7 @@
         autoplay: {
             delay: 3200,
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
+            pauseOnMouseEnter: false,
         },
         navigation: {
             nextEl: ".service-next",
@@ -244,16 +244,6 @@
             }
         }
     });
-
-    var serviceSliderContainer = document.querySelector(".service-slider-one");
-    if (serviceSliderContainer && typeof service_slider_one !== "undefined") {
-        serviceSliderContainer.addEventListener('mouseenter', function () {
-            service_slider_one.autoplay.stop();
-        });
-        serviceSliderContainer.addEventListener('mouseleave', function () {
-            service_slider_one.autoplay.start();
-        });
-    }
 
     var case_slider_one = new Swiper(".case-slider-one", {
         loop: true,
@@ -298,9 +288,14 @@
     ------------------------------------------------*/
 	var blog_slider_one = new Swiper(".blog-slider-one", {
         loop: true,
-        speed: 1500,
+        speed: 1200,
         freemode: false,
         spaceBetween: 24,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+        },
         pagination: {
             el: '.blog-pagination',
             clickable: true
