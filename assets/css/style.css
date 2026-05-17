@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 /*
 @File: Exrox Template Styles
 * This file contains the styling for the actual template, this
@@ -1216,6 +1216,61 @@ body {
 }
 
 /*--------------------------------------------------
+     WhatsApp Floating Button
+---------------------------------------------------*/
+.whatsapp-float {
+  position: fixed;
+  right: 30px;
+  bottom: 90px;
+  width: 46px;
+  height: 46px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+  z-index: 100;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: wa-pulse 2.5s infinite;
+}
+.whatsapp-float i {
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+}
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.1);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.6);
+  animation: none;
+}
+.whatsapp-float::before {
+  content: "Chat with us";
+  position: absolute;
+  right: 56px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.whatsapp-float:hover::before {
+  opacity: 1;
+}
+@keyframes wa-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70%  { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/*--------------------------------------------------
      Animation CSS
 ---------------------------------------------------*/
 .rotate {
@@ -2257,28 +2312,38 @@ body {
 .about-area.style-one .about-content .counter-card-wrap .counter-card h4 {
   font-size: 64px;
 }
+.about-area.style-one .achievement-box,
 .about-area.style-one .about-content .achievement-box {
-  padding: 30px 25px 35px 30px;
+  padding: 28px 28px 32px 28px;
   background: linear-gradient(90deg, #FFFFFF 0%, #F7F7F7 100%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
 }
+.about-area.style-one .achievement-box ul li,
 .about-area.style-one .about-content .achievement-box ul li {
-  padding-bottom: 23px;
-  margin-bottom: 23px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
   border-bottom: 1px solid #E3E3E3;
 }
+.about-area.style-one .achievement-box ul li:last-child,
 .about-area.style-one .about-content .achievement-box ul li:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
+.about-area.style-one .achievement-box ul li:first-child,
 .about-area.style-one .about-content .achievement-box ul li:first-child {
   padding-bottom: 10px;
+  margin-bottom: 12px;
 }
+.about-area.style-one .achievement-box ul li span,
 .about-area.style-one .about-content .achievement-box ul li span {
-  width: calc(100% - 52px);
+  width: auto;
 }
+.about-area.style-one .achievement-box ul li span:nth-child(2),
 .about-area.style-one .about-content .achievement-box ul li span:nth-child(2) {
-  width: 50px;
+  width: auto;
+  text-align: right;
 }
 .about-area.style-one .about-content .founders-box {
   padding: 35px 0 0;

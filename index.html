@@ -327,27 +327,67 @@
                                         <small class="fs-18 fw-normal text-md-center text-start d-inline-block">ABOUT US</small>
                                         Eleware Accounting is a modern financial services firm designed to simplify, streamline, and strengthen business finances positioned at the intersection of accuracy, compliance, and growth advisory.
                                     </h2>
+                                    <!-- Discover More button hidden
                                     <a href="about-us.html" class="btn style-one d-inline-flex align-items-center" data-cue="slideInLeft" data-delay="800">
                                         <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon" class="d-block mx-auto"></span>
                                         <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Discover More</span>
                                         <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon" class="d-block mx-auto"></span>
                                     </a>
+                                    -->
                                 </div>
                             </div>
-                            <div class="container-wrapper mb-45">
-                                <div class="about-shape move-right-full">
-                                    <img src="assets/img/about/shape-1.png" alt="Shape" class="about-shape d-block ms-auto rotate-fast">
-                                </div>
-                            </div>
-                            <div class="row align-items-center">
-                                <div class="col-lg-5 col-lg-5 pe-xxl-2 mb-md-30">
-                                    <div class="about-img-wrap img-container position-relative overflow-hidden round-20" data-cue="anim-left" data-delay="400" data-duration="1200">
-                                        <img src="assets/compressed-files/aboutus.jpeg" alt="Image" class="w-100 round-20">
+                            <!-- About shape hidden to keep Core Values area clean -->
+                            <div class="row align-items-start g-4 mt-50">
+
+                                <!-- LEFT: Core Values Card (25%) -->
+                                <div class="col-lg-3" data-cue="slideInLeft" data-delay="200">
+                                    <div style="background:linear-gradient(135deg,#f9fffe 0%,#f0fbf9 100%);border:1px solid rgba(0,149,130,0.15);border-radius:16px;padding:24px 22px;box-shadow:0 4px 20px rgba(0,149,130,0.08);">
+                                        <p style="font-size:10px;font-weight:700;letter-spacing:2.5px;color:var(--primaryColor);text-transform:uppercase;margin-bottom:18px;">Our Core Values</p>
+                                        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+                                            <li style="display:flex;align-items:flex-start;gap:10px;">
+                                                <span style="width:30px;height:30px;min-width:30px;border-radius:8px;background:rgba(0,149,130,0.12);display:flex;align-items:center;justify-content:center;margin-top:1px;">
+                                                    <i class="ri-check-line" style="color:var(--primaryColor);font-size:14px;"></i>
+                                                </span>
+                                                <span>
+                                                    <strong style="font-size:13px;display:block;color:#1a2b3c;line-height:1.4;font-weight:600;">Accuracy First</strong>
+                                                    <small style="font-size:11px;color:#888;line-height:1.4;">Zero compromise on precision</small>
+                                                </span>
+                                            </li>
+                                            <li style="display:flex;align-items:flex-start;gap:10px;">
+                                                <span style="width:30px;height:30px;min-width:30px;border-radius:8px;background:rgba(0,149,130,0.12);display:flex;align-items:center;justify-content:center;margin-top:1px;">
+                                                    <i class="ri-eye-line" style="color:var(--primaryColor);font-size:14px;"></i>
+                                                </span>
+                                                <span>
+                                                    <strong style="font-size:13px;display:block;color:#1a2b3c;line-height:1.4;font-weight:600;">Transparency</strong>
+                                                    <small style="font-size:11px;color:#888;line-height:1.4;">Honest at every step</small>
+                                                </span>
+                                            </li>
+                                            <li style="display:flex;align-items:flex-start;gap:10px;">
+                                                <span style="width:30px;height:30px;min-width:30px;border-radius:8px;background:rgba(0,149,130,0.12);display:flex;align-items:center;justify-content:center;margin-top:1px;">
+                                                    <i class="ri-bar-chart-line" style="color:var(--primaryColor);font-size:14px;"></i>
+                                                </span>
+                                                <span>
+                                                    <strong style="font-size:13px;display:block;color:#1a2b3c;line-height:1.4;font-weight:600;">Growth Mindset</strong>
+                                                    <small style="font-size:11px;color:#888;line-height:1.4;">Always thinking ahead</small>
+                                                </span>
+                                            </li>
+                                            <li style="display:flex;align-items:flex-start;gap:10px;">
+                                                <span style="width:30px;height:30px;min-width:30px;border-radius:8px;background:rgba(0,149,130,0.12);display:flex;align-items:center;justify-content:center;margin-top:1px;">
+                                                    <i class="ri-shield-check-line" style="color:var(--primaryColor);font-size:14px;"></i>
+                                                </span>
+                                                <span>
+                                                    <strong style="font-size:13px;display:block;color:#1a2b3c;line-height:1.4;font-weight:600;">Compliance First</strong>
+                                                    <small style="font-size:11px;color:#888;line-height:1.4;">Regulatory peace of mind</small>
+                                                </span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="col-lg-7 ps-xl-5">
-                                    <div class="about-content">
-                                        <h3 class="reveal-text-bottom">Eleware is a forward-thinking accounting and advisory firm committed to helping businesses grow with clarity, compliance, and confidence.</h3>
+
+                                <!-- RIGHT: Eleware Text + Stats (70%) -->
+                                <div class="col-lg-9" data-cue="slideInRight" data-delay="200">
+                                    <div class="about-content ps-lg-4" style="padding-top:0;">
+                                        <h3 class="reveal-text-bottom" style="margin-top:0;">Eleware is a forward-thinking accounting and advisory firm committed to helping businesses grow with clarity, compliance, and confidence.</h3>
                                         <div class="counter-card-wrap d-flex flex-wrap justify-content-md-between justify-content-center">
                                             <div class="counter-card text-center mb-30" data-cue="slideInLeft" data-delay="100">
                                                 <h4 class="text-title fw-semibold"><span class="counter fw-bold transition">75</span>+</h4>
@@ -362,57 +402,9 @@
                                                 <span class="fs-xxl-18 d-block">Client Retention Rate</span>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-xxl-6 col-lg-5 col-md-6 pe-xxl-4">
-                                                <div class="achievement-box position-relative z-1 move-right-full round-20 mb-md-30" data-cue="slideInLeft" data-delay="400">
-                                                    <h6 class="fs-18 font-primary fw-normal text-title mb-40">CORE VALUES</h6>
-                                                    <ul class="list-unstyled mb-0">
-                                                        <li class="d-flex flex-wrap align-items-start justify-content-between">
-                                                            <span class="fs-18 fw-semibold">Value</span>
-                                                            <span class="fs-18 fw-semibold">Principle</span>
-                                                        </li>
-                                                        <li class="d-flex flex-wrap align-items-start justify-content-between">
-                                                            <span class="fs-20 font-secondary fw-semibold text-title">Accuracy First</span>
-                                                            <span class="fs-20 font-secondary fw-semibold text-title">Always</span>
-                                                        </li>
-                                                        <li class="d-flex flex-wrap align-items-start justify-content-between">
-                                                            <span class="fs-20 font-secondary fw-semibold text-title">Transparency Always</span>
-                                                            <span class="fs-20 font-secondary fw-semibold text-title">Every Step</span>
-                                                        </li>
-                                                        <li class="d-flex flex-wrap align-items-start justify-content-between">
-                                                            <span class="fs-20 font-secondary fw-semibold text-title">Growth Mindset</span>
-                                                            <span class="fs-20 font-secondary fw-semibold text-title">Always</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <!-- FOUNDER SECTION HIDDEN Uncomment when client provides founder details
-                                            <div class="col-xxl-6 col-lg-7 col-md-6 ps-xxl-2">
-                                                <div class="founders-box bg_secondary round-20" data-cue="slideInRight" data-delay="400">
-                                                    <h6>"We don't just manage books we build financially stronger businesses."</h6>
-                                                    <div class="ceo-info-wrap d-flex flex-wrap align-items-center">
-                                                        <div class="ceo-img rounded-circle">
-                                                            <img src="assets/img/about/ceo.jpg" alt="Image" class="rounded-circle">
-                                                        </div>
-                                                        <div class="ceo-info">
-                                                            <h5 class="fs-20 fw-bold mb-6">Founder, Eleware Accounting</h5>
-                                                            <span class="text-title fs-xxl-18">Founder &amp; CEO</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="support-box round-20 overflow-hidden">
-                                                        <div class="move-text style-one position-relative z-1">
-                                                            <ul class="d-flex align-items-center list-unstyled mb-0">
-                                                                <li class="font-secondary fw-normal text-white">CALL US: <a href="tel:+919891464160" class="text-white fw-semibold">+91 98914 64160 </a></li>
-                                                                <li class="font-secondary fw-normal text-white">CALL US: <a href="tel:+919891464160" class="text-white fw-semibold">+91 98914 64160 </a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            END FOUNDER SECTION -->
-                                        </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -1223,6 +1215,11 @@
 
             </div>
         </div>
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/919891464160?text=Hello%20Eleware%2C%20I%20need%20accounting%20assistance." class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+            <i class="ri-whatsapp-line"></i>
+        </a>
+
         <!-- Back to Top -->
         <div id="progress-wrap" class="progress-wrap style-one">
             <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
