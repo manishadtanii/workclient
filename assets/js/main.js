@@ -765,12 +765,12 @@ try {
     }
     // Immediately invoked function to set the theme on initial load
     (function () {
-        if (localStorage.getItem('exrox_theme') === 'theme-dark') {
+        if (localStorage.getItem('exrox_theme') === 'theme-light') {
+            setTheme('theme-light');
+            document.querySelector('.slider-btn').checked = true;
+        } else {
             setTheme('theme-dark');
             document.querySelector('.slider-btn').checked = false;
-        } else {
-            setTheme('theme-light');
-        document.querySelector('.slider-btn').checked = true;
         }
     })();
 

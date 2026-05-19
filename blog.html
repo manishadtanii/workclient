@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+        <meta name="description" content="Eleware Accounting Blog — Expert insights on GST, ITR, financial reporting, and business advisory for Indian businesses.">
+
         <!-- Link of CSS files -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
@@ -15,8 +16,8 @@
         <link rel="stylesheet" href="assets/css/footer.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
         <link rel="stylesheet" href="assets/css/dark-theme.css">
-        
-        <title>Eleware Accounting – Accounting & Management Consulting HTML Template</title>
+
+        <title>Blogs &mdash; Eleware Accounting | Expert Financial Insights</title>
         <link rel="icon" type="image/png" href="assets/img/brand/logotab.png">
     </head>
     <body>
@@ -36,7 +37,7 @@
         <!-- Theme Switcher Start -->
         <div class="switch-theme-mode">
             <label id="switch" class="switch">
-                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <input type="checkbox" onchange="toggleTheme()" id="slider" class="slider-btn">
                 <span class="slider round"></span>
             </label>
         </div>
@@ -52,8 +53,31 @@
             <div id="smooth-content">
 
                 <div class="bg-albastor position-relative z-1">
+                    <!-- Navbar Top Start -->
+                    <div class="navbar-top style-two position-relative z-2">
+                        <div class="container style-two">
+                            <div class="row">
+                                <div class="col-md-7 mb-sm-6">
+                                    <ul class="contact-info list-unstyled text-md-start text-center mb-0">
+                                        <li class="d-inline-block"><a href="tel:+919891464160" class="contact-num d-block fw-bold text_secondary link-hover-secondary">+91 98914 64160</a></li>
+                                        <li class="d-inline-block"><a href="mailto:info@elewareaccounting.com" class="contact-mail fw-normal text-white hover-text-secondary d-inline-block">Info<span class="text_secondary">@</span>elewareaccounting.com</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5">
+                                    <ul class="social-profile style-two list-unstyled text-md-end text-center mb-0">
+                                        <li><a href="https://www.facebook.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="https://x.com/?lang=en" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-twitter-x-line"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                        <li><a href="https://www.instagram.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-instagram-line"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navbar Top End -->
+
                     <!-- Navbar Area Start -->
-                    <div class="navbar-area style-one position-relative z-2" id="navbar">
+                    <div class="navbar-area style-four position-relative z-2" id="navbar">
                         <div class="container style-two">
                             <div class="navbar-wrapper d-flex justify-content-between align-items-center">
                                 <a href="index.html" class="navbar-brand">
@@ -71,15 +95,22 @@
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="about-us.html">About Us</a></li>
                                             <li><a href="services.html">Services</a></li>
-                                            <li><a href="blog.html">Blogs</a></li>
+                                            <li><a href="blog.html" class="active">Blogs</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                                 <div class="other-options d-flex flex-wrap align-items-center justify-content-end">
+                                    <div class="option-item d-lg-block d-none">
+                                        <a href="appointment.html" class="btn style-one d-inline-flex align-items-center">
+                                            <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                            <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Get A Free Consultation</span>
+                                            <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                        </a>
+                                    </div>
                                     <div class="option-item position-relative d-flex align-items-center">
                                         <div class="mobile-options position-relative d-lg-none me-3">
-                                            <button class="dropdown-toggle  text-center bg-transparent border-0 p-0 transition" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                            <button class="dropdown-toggle text-center bg-transparent border-0 p-0 transition" type="button" data-bs-toggle="dropdown" aria-expanded="true">
                                                 <i class="ri-more-fill"></i>
                                             </button>
                                             <div class="dropdown-menu dropdown-menu-centered mobile-option-list top-1 border-0" data-bs-popper="static">
@@ -90,13 +121,6 @@
                                                 </a>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="option-item d-lg-block d-none">
-                                        <a href="appointment.html" class="btn style-one d-inline-flex align-items-center">
-                                            <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
-                                            <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Get A Free Consultation</span>
-                                            <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
-                                        </a>
                                     </div>
                                     <div class="option-item d-lg-none">
                                         <button type="button" class="menu-mobile-trigger">
@@ -112,145 +136,97 @@
                     </div>
                     <!-- Navbar Area End -->
 
-                    <!-- Breadcrumb Area Start -->
+                    <!-- Breadcrumb / Hero Area Start -->
                     <div class="breadcrumb-area style-one position-relative z-1">
                         <div class="br-bg img-container position-absolute top-0 start-0 w-100">
-                            <img src="assets/img/privacy.png" alt="Privacy Policy Hero" class="w-100 h-100 object-fit-cover">
+                            <img src="assets/img/about/about-hero.png" alt="Blog Hero" class="w-100 h-100 object-fit-cover">
                         </div>
                         <div class="container style-one">
                             <div class="row">
                                 <div class="col-xxl-10 col-lg-8">
-                                    <h2 class="section-title style-three text-white fw-bold mb-20 reveal-text">Privacy Policy</h2>
+                                    <h1 class="section-title style-three text-white fw-bold mb-20 reveal-text">Blogs</h1>
                                     <ul class="br-menu list-unstyled mb-0">
                                         <li class="fs-xxl-18"><a href="index.html">Home</a></li>
-                                        <li class="fs-xxl-18">Privacy Policy</li>
+                                        <li class="fs-xxl-18">Blogs</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Breadcrumb Area End -->
+                    <!-- Breadcrumb / Hero Area End -->
 
-                    <!-- Terms & Conditions Start -->
-                    <div class="container style-one ptb-120">
-                        <div class="terms-wrap">
-                            <h6 class="font-primary fs-18 mb-5">Last updated on January 01, 2025.</h6>
-                            <div class="single-para">
-                                <h5> Introduction</h5>
-                                <p class="ps-md-5 ms-md-5">Eleware Accounting is committed to protecting your privacy and ensuring that your personal and business data is handled securely and responsibly. This Privacy Policy explains how we collect, use, disclose, and protect the information you provide to us.</p>
+                    <!-- Blog Section Start -->
+                    <div class="blog-area style-two ptb-120 bg-albastor">
+                        <div class="container style-one">
+                            <div class="row mb-60">
+                                <div class="col-xl-10 offset-xl-1 text-center">
+                                    <small class="fs-18 fw-normal font-primary d-inline-block mb-10" style="letter-spacing: 1.5px; text-transform: uppercase;">OUR BLOGS</small>
+                                    <h2 class="section-title style-one fw-semibold title-anim mb-15">
+                                        Expert Insights on Accounting,<br>Taxation &amp; Financial Strategy
+                                    </h2>
+                                    <p class="fs-xxl-18 text-para" style="max-width:640px; margin: 0 auto;">Stay ahead with practical advice from CA-qualified professionals &mdash; covering compliance updates, tax-saving strategies, and growth-focused financial planning.</p>
+                                </div>
                             </div>
-                            <div class="single-para">
-                                <h5>What Information We Collect</h5>
-                                <p class="ps-md-5 ms-md-5">We may collect the following types of information:</p>
-                                <h6 class="fs-18 font-primary mb-2">Personal Information:</h6>
-                                <ul class="features-list style-one list-unstyled ps-md-5 ms-md-5">
-                                    <li class="position-relative">Full name</li>
-                                    <li class="position-relative">Email address</li>
-                                    <li class="position-relative">Phone number</li>
-                                    <li class="position-relative">Billing address</li>
-                                    <li class="position-relative">Business name and registration details</li>
-                                </ul>
-                                <h6 class="fs-18 font-primary mb-2">Billing Information:</h6>
-                                <ul class="features-list style-one list-unstyled ps-md-5 ms-md-5">
-                                    <li class="position-relative">Company financial records</li>
-                                    <li class="position-relative">Tax IDs and registration numbers</li>
-                                    <li class="position-relative">Accounting and bookkeeping files</li>
-                                    <li class="position-relative">Banking/payment details (as needed for services)</li>
-                                </ul>
-                                <h6 class="fs-18 font-primary mb-2"> Technical & Usage Data:</h6>
-                                <ul class="features-list style-one list-unstyled ps-md-5 ms-md-5">
-                                    <li class="position-relative">IP address</li>
-                                    <li class="position-relative">Browser type and version</li>
-                                    <li class="position-relative">Device identifiers</li>
-                                    <li class="position-relative">Pages viewed and time spent on our website</li>
-                                </ul>
-                            </div>
-                            <div class="single-para">
-                                <h5>How We Collect Information</h5>
-                                <p class="ps-md-5 ms-md-5">We collect data through:</p>
-                                <ul class="features-list style-one list-unstyled ps-md-5 ms-md-5">
-                                    <li class="position-relative">Website forms (e.g., contact, inquiry, newsletter signup)</li>
-                                    <li class="position-relative">Client onboarding processes</li>
-                                    <li class="position-relative">Service agreements and communication</li>
-                                    <li class="position-relative">Use of cookies and analytics tools (e.g., Google Analytics)</li>
-                                    <li class="position-relative">Third-party accounting or financial platforms integrated with our services</li>
-                                </ul>
-                            </div>
-                            <div class="single-para">
-                                <h5>Legal Basis for Processing</h5>
-                                <p class="ps-md-5 ms-md-5">We process your personal data under the following legal bases:</p>
-                                <ul class="features-list style-one list-unstyled ps-md-5 ms-md-5">
-                                    <li class="position-relative"><span class="text-title fw-medium">Performance of a contract</span> (e.g., service agreement)</li>
-                                    <li class="position-relative"><span class="text-title fw-medium">Legal obligation</span> (e.g., tax and compliance reporting)</li>
-                                    <li class="position-relative"><span class="text-title fw-medium">Legitimate interest</span> (e.g., service improvement)</li>
-                                    <li class="position-relative"><span class="text-title fw-medium">Consent</span> (e.g., marketing emails)</li>
-                                </ul>
-                            </div>
-                            <div class="single-para">
-                                <h5>How We Share Your Information</h5>
-                                <p class="ps-md-5 ms-md-5">We may share your data only when necessary and only with:</p>
-                                <ul class="features-list style-one list-unstyled ps-md-5 ms-md-5">
-                                    <li class="position-relative">Trusted third-party service providers (e.g., cloud accounting software, email platforms)</li>
-                                    <li class="position-relative">Regulatory bodies or government authorities (if legally required)</li>
-                                    <li class="position-relative">Our accountants, tax advisors, or legal representatives</li>
-                                </ul>
-                                <p class=" ps-md-5 ms-md-5">We do not sell, rent, or trade your personal data.</p>
-                            </div>
-                            <div class="single-para">
-                                <h5>Data Storage & Security</h5>
-                                <p class="ps-md-5 ms-md-5">We implement technical and organizational measures to protect your information:</p>
-                                <ul class="features-list style-one list-unstyled ps-md-5 ms-md-5">
-                                     <li class="position-relative">Encrypted data transmission (SSL)</li>
-                                     <li class="position-relative">Secure cloud storage providers (e.g., AWS, Google Cloud, Zoho, Tally)</li>
-                                     <li class="position-relative">Access controls and regular security audits</li>
-                                     <li class="position-relative">Backup systems and disaster recovery protocols</li>
-                                </ul>
-                            </div>
-                            <div class="single-para">
-                                <h5>Your Rights</h5>
-                                <p class="ps-md-5 ms-md-5">Depending on your location, you have the right to:</p>
-                                <ul class="features-list list-unstyled ps-md-5 ms-md-5">
-                                   <li class="position-relative">Access the personal data we hold about you</li>
-                                   <li class="position-relative">Request correction of inaccurate information</li>
-                                   <li class="position-relative">Request deletion of your data (where legally applicable)</li>
-                                   <li class="position-relative">Withdraw consent at any time</li>
-                                   <li class="position-relative">Object to processing or request data portability</li>
-                                </ul>
-                                <p>To exercise any of these rights, email us at <a href="mailto:info@elewareaccounting.com" class="text-optional hover-text-primary transition">info@elewareaccounting.com</a>.</p>
-                            </div>
-                            <div class="single-para">
-                                <h5>Cookies Policy</h5>
-                                <p class="ps-md-5 ms-md-5">Our website uses cookies to improve your experience. Cookies help us analyze site traffic, remember preferences, and enhance security.
-                                You can control cookie usage in your browser settings. By using our site, you consent to our cookie usage as described.</p>
-                            </div>
-                            <div class="single-para">
-                                <h5>International Data Transfer</h5>
-                                <p class="ps-md-5 ms-md-5">If you are located outside the country where our servers are hosted, your data may be transferred and processed across borders. We ensure such transfers are secured and legally compliant (e.g., through standard contractual clauses where required).</p>
-                            </div>
-                            <div class="single-para">
-                                <h5>Third Party Links</h5>
-                                <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of those websites. We encourage you to read their policies before submitting any data.</p>
-                            </div>
-                            <div class="single-para">
-                                <h5>Changes To This Policy</h5>
-                                <p>We may update this Privacy Policy occasionally to reflect changes in our practices or legal obligations. Updates will be posted on this page with a revised “Effective Date.”</p>
-                            </div>
-                            <div class="single-para">
-                                <h5>Contact Information</h5>
-                                <p>For any questions about this Privacy Policy, please contact:</p>
-                                <ul class="features-list style-one list-unstyled ps-md-5 ms-md-5">
-                                    <li class="position-relative"><span class="text-title fw-semibold">Email:</span> <a href="mailto:info@elewareaccounting.com" class="text-para hover-text-primary transition">info@elewareaccounting.com</a></li>
-                                    <li class="position-relative"><span class="text-title fw-semibold">Phone:</span> <a href="tel:+919891464160" class="text-optional hover-text-primary transition">+91 98914 64160</a></li>
-                                    <li class="position-relative"><span class="text-title fw-semibold">Website:</span> <a href="https://www.elewareaccounting.com" target="_blank" class="text-para hover-text-primary transition">www.elewareaccounting.com</a></li>
-                                </ul>
+                            <div class="row g-4">
+
+                                <!-- Blog Card 1 -->
+                                <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-duration="700" data-delay="100">
+                                    <div class="blog-card style-one bg-albastor position-relative round-20" style="height:100%; display:flex; flex-direction:column; overflow:hidden;">
+                                        <div class="position-relative overflow-hidden" style="height: 240px; flex-shrink:0;">
+                                            <img src="assets/img/blog/blog1.jpeg" alt="GST Compliance Guide 2025" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.5s ease;">
+                                        </div>
+                                        <div class="blog-info" style="flex:1; display:flex; flex-direction:column;">
+                                            <ul class="blog-metainfo style-one list-unstyled">
+                                                <li class="position-relative"><a href="#">GST &amp; Compliance</a></li>
+                                                <li class="position-relative"><a href="#">May 5, 2025</a></li>
+                                            </ul>
+                                            <h3><a href="#" class="text-title link-hover-primary">How to Avoid Common GST Filing Mistakes That Cost Businesses Lakhs</a></h3>
+                                            <p class="fs-xxl-18 text-para mb-0">A practical checklist covering input tax credit mismatches, GSTR-1 vs GSTR-3B reconciliation gaps, and late-filing penalties &mdash; so your business stays fully compliant.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Blog Card 2 -->
+                                <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-duration="700" data-delay="200">
+                                    <div class="blog-card style-one bg-albastor position-relative round-20" style="height:100%; display:flex; flex-direction:column; overflow:hidden;">
+                                        <div class="position-relative overflow-hidden" style="height: 240px; flex-shrink:0;">
+                                            <img src="assets/img/blog/blog2.jpeg" alt="ITR Filing for SMEs" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.5s ease;">
+                                        </div>
+                                        <div class="blog-info" style="flex:1; display:flex; flex-direction:column;">
+                                            <ul class="blog-metainfo style-one list-unstyled">
+                                                <li class="position-relative"><a href="#">Tax Planning</a></li>
+                                                <li class="position-relative"><a href="#">Apr 18, 2025</a></li>
+                                            </ul>
+                                            <h3><a href="#" class="text-title link-hover-primary">ITR Filing for SMEs: FY 2024-25 Deadlines, Deductions &amp; Best Practices</a></h3>
+                                            <p class="fs-xxl-18 text-para mb-0">From selecting the right ITR form to maximising deductions under Section 80C, 80D, and 44AD &mdash; a complete guide for small and medium businesses preparing for FY 2024-25.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Blog Card 3 -->
+                                <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-duration="700" data-delay="300">
+                                    <div class="blog-card style-one bg-albastor position-relative round-20" style="height:100%; display:flex; flex-direction:column; overflow:hidden;">
+                                        <div class="position-relative overflow-hidden" style="height: 240px; flex-shrink:0;">
+                                            <img src="assets/img/blog/blog3.jpeg" alt="Financial Reporting Best Practices" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.5s ease;">
+                                        </div>
+                                        <div class="blog-info" style="flex:1; display:flex; flex-direction:column;">
+                                            <ul class="blog-metainfo style-one list-unstyled">
+                                                <li class="position-relative"><a href="#">Financial Advisory</a></li>
+                                                <li class="position-relative"><a href="#">Mar 22, 2025</a></li>
+                                            </ul>
+                                            <h3><a href="#" class="text-title link-hover-primary">Building Investor-Ready Financial Reports: What Every Founder Must Know</a></h3>
+                                            <p class="fs-xxl-18 text-para mb-0">Understand the key financial statements &mdash; P&amp;L, Balance Sheet, and Cash Flow &mdash; and how to structure them to build credibility with investors, banks, and board members.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    <!-- Terms & Conditions End -->
+                    <!-- Blog Section End -->
 
                 </div>
 
-                <!-- Footer Section Start -->
                 <!-- Footer Section Start -->
                 <footer class="footer-area style-one">
                     <div class="container style-one">
@@ -276,6 +252,7 @@
                                             <li class="d-block fs-xxl-18"><a href="index.html">Home</a></li>
                                             <li class="d-block fs-xxl-18"><a href="about-us.html">About Us</a></li>
                                             <li class="d-block fs-xxl-18"><a href="services.html">Services</a></li>
+                                            <li class="d-block fs-xxl-18"><a href="blog.html">Blogs</a></li>
                                             <li class="d-block fs-xxl-18"><a href="contact.html">Contact</a></li>
                                         </ul>
                                     </div>
@@ -284,10 +261,6 @@
                                     <div class="footer-widget mb-30" data-cue="slideInLeft" data-delay="200">
                                         <h3 class="footer-widget-title fs-24 text-white mb-20">Stay Connected</h3>
                                         <p class="text-gray fs-xxl-18 mb-25">Subscribe for updates on finance, compliance, and advisory insights tailored for your business.</p>
-                                        <!-- <form action="#" class="newsletter-form style-one position-relative mb-30">
-                                            <input type="email" class="w-100 fs-xxl-18 text-white border-0 round-5 outline-0" placeholder="Type your email" required>
-                                            <button type="submit" class="position-absolute top-0 end-0 h-100 border-0 bg-transparent"><i class="ri-send-plane-fill"></i></button>
-                                        </form> -->
                                         <ul class="social-profile style-one list-unstyled d-flex align-items-center flex-wrap mb-0">
                                             <li><a href="https://www.facebook.com/" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-facebook-fill"></i></a></li>
                                             <li><a href="https://x.com/?lang=en" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-twitter-x-line"></i></a></li>
@@ -321,10 +294,16 @@
                         </div>
                     </div>
                 </footer>
-                <!-- Footer End -->                <!-- Footer End -->
+                <!-- Footer End -->
 
             </div>
         </div>
+
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/919891464160?text=Hello%20Eleware%2C%20I%20need%20accounting%20assistance." class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+            <i class="ri-whatsapp-line"></i>
+        </a>
+
         <!-- Back to Top -->
         <div id="progress-wrap" class="progress-wrap style-one">
             <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">

@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -190,13 +190,25 @@
             }
 
             /* ---- Dark mode ---- */
-            .dark-theme .svc-card { background: #042a30; border-color: #0a404a; }
-            .dark-theme .svc-card-body h3 { color: #e8f4f6; }
-            .dark-theme .svc-card-body p { color: #8aacb4; }
-            .dark-theme .svc-list li { color: #9fbec6; }
-            .dark-theme .svc-divider { background: #0d4550; }
-            .dark-theme .svc-cta { color: #e8f4f6; }
-            .dark-theme .svc-cta .svc-cta-icon { background: #0d4550; }
+            .theme-dark .svc-card { background: #042a30; border-color: #0a404a; }
+            .theme-dark .svc-card-body h3 { color: #e8f4f6; }
+            .theme-dark .svc-card-body p { color: #8aacb4; }
+            .theme-dark .svc-list li { color: #9fbec6; }
+            .theme-dark .svc-divider { background: #0d4550; }
+            .theme-dark .svc-cta { color: var(--secondaryColor, #7ED957); }
+            .theme-dark .svc-cta .svc-cta-icon {
+                background: #0d4550;
+                color: var(--secondaryColor, #7ED957);
+            }
+            .theme-dark .svc-cta:hover { color: var(--secondaryColor, #7ED957); }
+            .theme-dark .svc-cta:hover .svc-cta-icon {
+                background: var(--secondaryColor, #7ED957);
+                color: #00252C;
+            }
+            .theme-dark .svc-section-tag {
+                background: rgba(126, 217, 87, 0.12);
+                color: var(--secondaryColor, #7ED957);
+            }
         </style>
     </head>
     <body>
@@ -267,6 +279,7 @@
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="about-us.html">About Us</a></li>
                                             <li><a href="services.html" class="active">Services</a></li>
+                                            <li><a href="blog.html">Blogs</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                         </ul>
                                     </nav>
