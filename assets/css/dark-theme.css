@@ -1270,3 +1270,29 @@ input:checked + .slider:before {
 .theme-dark [style*="border-bottom: 1px solid rgba(0,37,44,0.07)"] {
   border-bottom-color: var(--borderColor) !important;
 }
+
+/* ============================================================
+   Home Page — Core Values Card (left card in About section)
+   ============================================================ */
+.theme-dark .home-values-card {
+  background: linear-gradient(135deg, #042a30 0%, #063540 100%) !important;
+  border-color: rgba(0, 149, 130, 0.3) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* "Our Core Values" label — already uses var(--primaryColor), fine */
+
+/* Value item strong (heading) */
+.theme-dark .home-values-card strong {
+  color: #e8f4f6 !important;
+}
+
+/* Value item small (subtitle) */
+.theme-dark .home-values-card small {
+  color: #7aacb8 !important;
+}
+
+/* Icon background circles */
+.theme-dark .home-values-card li > span:first-child {
+  background: rgba(0, 149, 130, 0.2) !important;
+}
