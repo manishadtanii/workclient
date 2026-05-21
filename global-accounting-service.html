@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Global Accounting Service &mdash; Eleware Accounting | Multi-jurisdictional accounting, international tax compliance, and cross-border financial solutions for growing businesses.">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/scrollcue.min.css">
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/header.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/dark-theme.css">
+        <title>Global Accounting Service &mdash; Eleware | Multi-jurisdictional Tax &amp; Compliance</title>
+        <link rel="icon" type="image/png" href="assets/img/brand/logotab.png">
+        <style>
+            /* ============================================
+               GLOBAL ACCOUNTING SERVICE PAGE STYLES
+               ============================================ */
+
+            .gas-section-tag {
+                display: inline-block;
+                background: #edf7e8;
+                color: #00252C;
+                font-size: 11.5px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                padding: 5px 14px;
+                border-radius: 20px;
+                margin-bottom: 16px;
+            }
+
+            .gas-card {
+                background: #fff;
+                border-radius: 16px;
+                overflow: visible;
+                border: 1px solid #e4eaec;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                position: relative;
+                transition: transform 0.35s ease, box-shadow 0.35s ease;
+                padding: 26px 28px;
+            }
+
+            .gas-card::before {
+                content: "";
+                position: absolute;
+                top: 0; left: 0; right: 0;
+                height: 3px;
+                background: linear-gradient(90deg, #00252C, var(--secondaryColor, #7ED957));
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.4s ease;
+                z-index: 3;
+            }
+
+            .gas-card:hover::before { transform: scaleX(1); }
+            .gas-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 20px 50px rgba(0, 37, 44, 0.14);
+            }
+
+            .gas-card h4 {
+                font-size: 18px;
+                font-weight: 700;
+                color: #00252C;
+                margin-bottom: 12px;
+                line-height: 1.35;
+            }
+
+            .gas-card p {
+                font-size: 14px;
+                color: #5a6a72;
+                line-height: 1.7;
+                margin-bottom: 0;
+            }
+
+            .gas-divider {
+                height: 1px;
+                background: #edf1f3;
+                margin: 18px 0;
+            }
+
+            .gas-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .gas-list li {
+                display: flex;
+                align-items: flex-start;
+                gap: 9px;
+                margin-bottom: 9px;
+                font-size: 13.5px;
+                color: #3d5259;
+                line-height: 1.5;
+            }
+
+            .gas-list li:last-child { margin-bottom: 0; }
+            .gas-list li .gas-tick {
+                flex-shrink: 0;
+                width: 16px;
+                height: 16px;
+                margin-top: 2px;
+            }
+
+            /* Process Flow Section */
+            .process-step {
+                text-align: center;
+                position: relative;
+            }
+
+            .process-step-icon {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #edf7e8 0%, #f9fffe 100%);
+                border: 2px solid #7ED957;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 20px;
+                font-size: 28px;
+                color: #00252C;
+                font-weight: 700;
+            }
+
+            .process-step h4 {
+                font-size: 16px;
+                font-weight: 700;
+                color: #00252C;
+                margin-bottom: 10px;
+            }
+
+            .process-step p {
+                font-size: 13.5px;
+                color: #6b7280;
+                line-height: 1.6;
+                margin-bottom: 0;
+            }
+
+            /* Benefit Cards Grid */
+            .benefit-card {
+                background: linear-gradient(135deg, #f9fffe 0%, #f0fbf9 100%);
+                border: 1px solid rgba(0,149,130,0.15);
+                border-radius: 16px;
+                padding: 30px;
+                text-align: center;
+                transition: transform 0.35s ease, box-shadow 0.35s ease;
+            }
+
+            .benefit-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 15px 40px rgba(0, 149, 130, 0.12);
+            }
+
+            .benefit-card .icon {
+                font-size: 42px;
+                color: #7ED957;
+                margin-bottom: 15px;
+                display: block;
+            }
+
+            .benefit-card h4 {
+                font-size: 16px;
+                font-weight: 700;
+                color: #00252C;
+                margin-bottom: 10px;
+            }
+
+            .benefit-card p {
+                font-size: 13.5px;
+                color: #6b7280;
+                line-height: 1.6;
+                margin-bottom: 0;
+            }
+
+            /* FAQ Section */
+            .faq-item {
+                background: #fff;
+                border: 1px solid #e4eaec;
+                border-radius: 12px;
+                margin-bottom: 16px;
+                padding: 24px;
+                transition: all 0.3s ease;
+            }
+
+            .faq-item:hover {
+                box-shadow: 0 8px 20px rgba(0, 37, 44, 0.08);
+            }
+
+            .faq-question {
+                font-size: 15px;
+                font-weight: 700;
+                color: #00252C;
+                margin-bottom: 12px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .faq-question i {
+                transition: transform 0.3s ease;
+            }
+
+            .faq-item.active .faq-question i {
+                transform: rotate(180deg);
+            }
+
+            .faq-answer {
+                font-size: 13.5px;
+                color: #6b7280;
+                line-height: 1.7;
+                display: none;
+            }
+
+            .faq-item.active .faq-answer {
+                display: block;
+            }
+
+            /* Dark Mode */
+            .theme-dark .gas-card { background: #042a30; border-color: #0a404a; }
+            .theme-dark .gas-card h4 { color: #e8f4f6; }
+            .theme-dark .gas-card p { color: #8aacb4; }
+            .theme-dark .gas-list li { color: #9fbec6; }
+            .theme-dark .gas-divider { background: #0d4550; }
+            .theme-dark .gas-section-tag { background: rgba(126, 217, 87, 0.12); color: var(--secondaryColor, #7ED957); }
+            .theme-dark .process-step h4 { color: #e8f4f6; }
+            .theme-dark .process-step p { color: #8aacb4; }
+            .theme-dark .process-step-icon { background: rgba(126, 217, 87, 0.12); border-color: var(--secondaryColor, #7ED957); }
+            .theme-dark .benefit-card { background: rgba(0,37,44,0.3); border-color: #0a404a; }
+            .theme-dark .benefit-card h4 { color: #e8f4f6; }
+            .theme-dark .benefit-card p { color: #8aacb4; }
+            .theme-dark .faq-item { background: #042a30; border-color: #0a404a; }
+            .theme-dark .faq-item:hover { box-shadow: 0 8px 20px rgba(126, 217, 87, 0.12); }
+            .theme-dark .faq-question { color: #e8f4f6; }
+            .theme-dark .faq-answer { color: #8aacb4; }
+
+            /* Process & FAQ Section Dark Theme Background */
+            .theme-dark .gas-process-section,
+            .theme-dark .gas-faq-section {
+                background: linear-gradient(135deg, #042a30 0%, #06384a 100%) !important;
+                border-top-color: rgba(126, 217, 87, 0.15) !important;
+            }
+
+            .theme-dark .gas-process-section .section-title,
+            .theme-dark .gas-faq-section .section-title {
+                color: #e8f4f6;
+            }
+
+            .theme-dark .gas-process-section .fs-xxl-18,
+            .theme-dark .gas-faq-section .fs-xxl-18 {
+                color: #8aacb4;
+            }
+
+            /* Process 5-Column Layout */
+            .col-lg-2-5 {
+                flex: 0 0 calc(20% - 12.8px);
+                max-width: calc(20% - 12.8px);
+            }
+            
+            @media (max-width: 991px) {
+                .col-lg-2-5 {
+                    flex: 0 0 calc(50% - 8px);
+                    max-width: calc(50% - 8px);
+                }
+            }
+            
+            @media (max-width: 575px) {
+                .col-lg-2-5 {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Preloader -->
+        <div class="preloader-area" id="preloader">
+            <div class="spinner">
+                <div></div><div></div><div></div><div></div><div></div>
+            </div>
+        </div>
+
+        <!-- Theme Switcher -->
+        <div class="switch-theme-mode">
+            <label id="switch" class="switch">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <!-- Custom Cursor -->
+        <div class="cursor">
+            <span class="cursor-text d-flex flex-column align-items-center justify-content-center rounded-circle bg-white text-title fs-14 fw-semibold"></span>
+        </div>
+        <div class="cursor-inner"></div>
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <div class="bg-albastor position-relative z-1">
+
+                    <!-- Navbar Top -->
+                    <div class="navbar-top style-two position-relative z-2">
+                        <div class="container style-two">
+                            <div class="row">
+                                <div class="col-md-7 mb-sm-6">
+                                    <ul class="contact-info list-unstyled text-md-start text-center mb-0">
+                                        <li class="d-inline-block"><a href="tel:+919891464160" class="contact-num d-block fw-bold text_secondary link-hover-secondary">+91 98914 64160</a></li>
+                                        <li class="d-inline-block"><a href="mailto:info@elewareaccounting.com" class="contact-mail fw-normal text-white hover-text-secondary d-inline-block">Info<span class="text_secondary">@</span>elewareaccounting.com</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5">
+                                    <ul class="social-profile style-two list-unstyled text-md-end text-center mb-0">
+                                        <li><a href="https://www.facebook.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="https://x.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-twitter-x-line"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                        <li><a href="https://www.instagram.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-instagram-line"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navbar -->
+                    <div class="navbar-area style-four position-relative z-2" id="navbar">
+                        <div class="container style-two">
+                            <div class="navbar-wrapper d-flex justify-content-between align-items-center">
+                                <a href="index.html" class="navbar-brand">
+                                    <img src="assets/img/brand/logow.png" alt="Eleware Accounting">
+                                </a>
+                                <div class="menu-area mx-auto">
+                                    <div class="overlay"></div>
+                                    <nav class="menu">
+                                        <div class="menu-mobile-header">
+                                            <button type="button" class="menu-mobile-arrow bg-transparent border-0"><i class="ri-arrow-left-s-line"></i></button>
+                                            <div class="menu-mobile-title"></div>
+                                            <button type="button" class="menu-mobile-close bg-transparent border-0"><i class="ri-close-line"></i></button>
+                                        </div>
+                                        <ul class="menu-section p-0 mb-0 lh-1">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li class="position-relative group">
+                                                <a href="services.html">Services</a>
+                                                <ul class="submenu list-unstyled position-absolute p-0 mb-0">
+                                                    <li><span class="submenu-label">VCFO</span></li>
+                                                    <li><a href="staffing-industry-expertise.html">Staffing Industry Expertise</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="global-accounting-service.html" class="active">Global Accounting Service</a></li>
+                                            <li><a href="blog.html">Blogs</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="other-options d-flex flex-wrap align-items-center justify-content-end">
+                                    <div class="option-item d-lg-block d-none">
+                                        <a href="appointment.html" class="btn style-one d-inline-flex align-items-center">
+                                            <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                            <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Get A Free Consultation</span>
+                                            <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="option-item position-relative d-flex align-items-center">
+                                        <div class="mobile-options position-relative d-lg-none me-3">
+                                            <button class="dropdown-toggle text-center bg-transparent border-0 p-0 transition" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                <i class="ri-more-fill"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-centered mobile-option-list top-1 border-0" data-bs-popper="static">
+                                                <a href="appointment.html" class="btn style-one d-inline-flex align-items-center">
+                                                    <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                                    <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Get A Free Consultation</span>
+                                                    <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="option-item d-lg-none">
+                                        <button type="button" class="menu-mobile-trigger">
+                                            <span></span><span></span><span></span><span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Breadcrumb -->
+                    <div class="breadcrumb-area style-one position-relative z-1">
+                        <div class="br-bg img-container position-absolute top-0 start-0 w-100">
+                            <img src="assets/compressed-files/hero1.jpeg" alt="Global Accounting Service" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="container style-one">
+                            <div class="row">
+                                <div class="col-xxl-10 col-lg-8">
+                                    <h2 class="section-title style-three text-white fw-bold mb-20 reveal-text">Global Accounting Service</h2>
+                                    <ul class="br-menu list-unstyled mb-0">
+                                        <li class="fs-xxl-18"><a href="index.html">Home</a></li>
+                                        <li class="fs-xxl-18">Global Accounting Service</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Breadcrumb End -->
+
+                    <!-- Global Accounting Service Section Start -->
+                    <div class="pt-115 pb-90">
+                        <div class="container style-two">
+
+                            <!-- Section Heading -->
+                            <div class="row mb-60">
+                                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
+                                    <span class="gas-section-tag">International Expertise</span>
+                                    <h2 class="section-title style-one fw-semibold title-anim mb-20">
+                                        International Business Made Local
+                                    </h2>
+                                    <p class="fs-xxl-18">Expand globally with confidence. Our ICAI-certified expertise spans multi-jurisdictional accounting, cross-border compliance, and strategic international tax planning.</p>
+                                </div>
+                            </div>
+
+                            <!-- Core Service Features -->
+                            <div class="row g-4 mb-4">
+
+                                <!-- Feature 1: Multi-Currency Accounting -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-exchange-2-line" style="color:#7ED957;margin-right:8px;"></i>Multi-Currency Accounting</h4>
+                                        <p>Real-time currency conversion, FX gain/loss tracking, and consolidated reporting across multiple jurisdictions and currencies.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Live FX Rate Integration</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Currency-wise Reporting</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Hedging Advice</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 2: International Tax Planning -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-global-line" style="color:#7ED957;margin-right:8px;"></i>International Tax Planning</h4>
+                                        <p>Strategic tax optimization across multiple countries, transfer pricing compliance, and treaty utilization to minimize global tax burden.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Transfer Pricing Documentation</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Tax Treaty Analysis</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Advance Pricing Agreements</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 3: Overseas Client Management -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="200">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-team-line" style="color:#7ED957;margin-right:8px;"></i>Overseas Client Management</h4>
+                                        <p>Dedicated support for managing clients across US, UK, Middle East, and other international markets with compliance in each region.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Multi-country Payroll</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Regional Tax Filings</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Local Compliance</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!-- End Row 1 -->
+
+                            <!-- Row 2: More Features -->
+                            <div class="row g-4 mb-60">
+
+                                <!-- Feature 4: Documentation & Reporting -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="300">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-file-text-line" style="color:#7ED957;margin-right:8px;"></i>Cross-Border Documentation</h4>
+                                        <p>Complete documentation management for international transactions, FEMA compliance, and customs documentation support.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>FEMA Compliance</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Invoice Management</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Customs Documentation</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 5: Subsidiary Management -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-building-2-line" style="color:#7ED957;margin-right:8px;"></i>Foreign Subsidiary Support</h4>
+                                        <p>End-to-end accounting for overseas subsidiaries including statutory filings, consolidation, and inter-company reconciliation.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Subsidiary Accounting</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Inter-company Reconciliation</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Consolidated Reporting</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 6: 24/7 Timezone Support -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-time-line" style="color:#7ED957;margin-right:8px;"></i>24/7 Global Support</h4>
+                                        <p>Round-the-clock support across IST, EST, MST, CST, PST, and CTE zones ensuring your queries are answered anytime, anywhere.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Multiple Timezone Coverage</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Quick-turnaround Responses</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Dedicated Account Managers</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!-- End Row 2 -->
+
+                        </div><!-- Container End -->
+                    </div>
+                    <!-- Global Accounting Section End -->
+
+                    <!-- Process Section -->
+                    <div class="gas-process-section pt-60 pb-90" style="background: linear-gradient(135deg, #f9fffe 0%, #f0fbf9 100%); border-top: 1px solid rgba(0,149,130,0.1);">
+                        <div class="container style-two">
+
+                            <div class="row mb-60">
+                                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
+                                    <span class="gas-section-tag">Our Process</span>
+                                    <h2 class="section-title style-one fw-semibold title-anim mb-20">
+                                        Five-Step Global Accounting Framework
+                                    </h2>
+                                    <p class="fs-xxl-18">Streamlined process for seamless international accounting and compliance management.</p>
+                                </div>
+                            </div>
+
+                            <div class="row g-4">
+                                <div class="col-lg-2-5 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="process-step">
+                                        <div class="process-step-icon">1</div>
+                                        <h4>Assessment</h4>
+                                        <p>Understand your global footprint, jurisdictions, currencies, and compliance requirements.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2-5 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="process-step">
+                                        <div class="process-step-icon">2</div>
+                                        <h4>Documentation</h4>
+                                        <p>Collect and organize cross-border financial records, invoices, and transaction documents.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2-5 col-md-6" data-cue="slideInUp" data-delay="200">
+                                    <div class="process-step">
+                                        <div class="process-step-icon">3</div>
+                                        <h4>Strategy</h4>
+                                        <p>Develop compliance and tax optimization strategy for all operating jurisdictions.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2-5 col-md-6" data-cue="slideInUp" data-delay="300">
+                                    <div class="process-step">
+                                        <div class="process-step-icon">4</div>
+                                        <h4>Execution</h4>
+                                        <p>File returns, manage compliance deadlines, and execute international tax strategies.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2-5 col-md-6" data-cue="slideInUp" data-delay="400">
+                                    <div class="process-step">
+                                        <div class="process-step-icon">5</div>
+                                        <h4>Support</h4>
+                                        <p>Ongoing monitoring, updates, and proactive guidance throughout the fiscal year.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Process Section End -->
+
+                    <!-- Why Choose Us Section -->
+                    <div class="pt-90 pb-90">
+                        <div class="container style-two">
+
+                            <div class="row mb-60">
+                                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
+                                    <span class="gas-section-tag">Why Eleware</span>
+                                    <h2 class="section-title style-one fw-semibold title-anim mb-20">
+                                        Global Expertise, Local Touch
+                                    </h2>
+                                    <p class="fs-xxl-18">ICAI-certified accountants with deep international experience handling Indian and global businesses.</p>
+                                </div>
+                            </div>
+
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="benefit-card">
+                                        <span class="icon"><i class="ri-team-line"></i></span>
+                                        <h4>ICAI-Qualified Expertise</h4>
+                                        <p>All accounting work overseen by ICAI-registered Chartered Accountants with international accounting experience.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="benefit-card">
+                                        <span class="icon"><i class="ri-global-line"></i></span>
+                                        <h4>Multi-Region Experience</h4>
+                                        <p>Proven expertise managing businesses with operations in US, UK, Middle East, Europe, and Southeast Asia.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-delay="200">
+                                    <div class="benefit-card">
+                                        <span class="icon"><i class="ri-secure-payment-line"></i></span>
+                                        <h4>Data Security</h4>
+                                        <p>We protect every client record with secure handling, encrypted storage, and strict confidentiality.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Why Choose Us Section End -->
+
+                    <!-- FAQ Section -->
+                    <div class="gas-faq-section pt-60 pb-90" style="background: linear-gradient(135deg, #f9fffe 0%, #f0fbf9 100%); border-top: 1px solid rgba(0,149,130,0.1);">
+                        <div class="container style-two">
+
+                            <div class="row mb-60">
+                                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
+                                    <span class="gas-section-tag">Common Questions</span>
+                                    <h2 class="section-title style-one fw-semibold title-anim mb-20">
+                                        Frequently Asked Questions
+                                    </h2>
+                                    <p class="fs-xxl-18">Quick answers to help you understand our global accounting service.</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-8 offset-lg-2">
+
+                                    <div class="faq-item active" data-cue="slideInUp" data-delay="0">
+                                        <div class="faq-question">
+                                            <span>Which countries do you support?</span>
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </div>
+                                        <div class="faq-answer">
+                                            <p>We specialize in India-US, India-UK, India-Middle East, and India-Southeast Asia corridors. For other regions, we have a network of international partners to ensure compliance and reporting.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="faq-item" data-cue="slideInUp" data-delay="100">
+                                        <div class="faq-question">
+                                            <span>How do you handle currency conversion?</span>
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </div>
+                                        <div class="faq-answer">
+                                            <p>We use live FX rates for accurate conversion, track FX gains and losses separately, and provide consolidated reporting in your base currency. We can also advise on hedging strategies to minimize currency risk.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="faq-item" data-cue="slideInUp" data-delay="200">
+                                        <div class="faq-question">
+                                            <span>What is transfer pricing compliance?</span>
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </div>
+                                        <div class="faq-answer">
+                                            <p>Transfer pricing ensures inter-company transactions between entities in different countries are priced at arm's length. We prepare required documentation, analysis, and filing to ensure compliance with local tax authorities.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="faq-item" data-cue="slideInUp" data-delay="300">
+                                        <div class="faq-question">
+                                            <span>Can you handle multiple currencies in real-time?</span>
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </div>
+                                        <div class="faq-answer">
+                                            <p>Yes, we integrate live currency feeds and provide real-time consolidated reporting across all operating currencies. All transactions are tracked in their original currency and converted for consolidation.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="faq-item" data-cue="slideInUp" data-delay="400">
+                                        <div class="faq-question">
+                                            <span>What's your turnaround time for international filings?</span>
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </div>
+                                        <div class="faq-answer">
+                                            <p>Our 24/7 global team ensures quick turnarounds. Most filing and compliance work is completed within 5-10 business days depending on jurisdiction-specific requirements and document availability.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Section End -->
+
+                    <!-- CTA Section -->
+                    <div class="pt-90 pb-90">
+                        <div class="container style-two">
+                            <div class="row">
+                                <div class="col-lg-8 offset-lg-2 text-center" data-cue="slideInUp">
+                                    <h2 class="section-title style-one fw-semibold mb-35">Ready to Go Global?</h2>
+                                    <p class="fs-xxl-18 mb-40">Let's discuss your international expansion and build a compliant, efficient accounting structure for your global business.</p>
+                                    <a href="appointment.html" class="btn style-one d-inline-flex align-items-center">
+                                        <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                        <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Book Your Free Consultation</span>
+                                        <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CTA Section End -->
+
+                </div><!-- .bg-albastor end -->
+
+                <!-- Footer -->
+                <footer class="footer-area style-one">
+                    <div class="container style-one">
+                        <div class="footer-top pt-115">
+                            <div class="row mb-65">
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="footer-widget mb-30" data-cue="slideInLeft">
+                                        <a href="index.html" class="logo d-block mb-30">
+                                            <img src="assets/img/brand/logow.png" alt="Eleware Accounting">
+                                        </a>
+                                        <p class="text-gray fs-xxl-18 mb-25">Clarity in Numbers. Confidence in Growth. Trusted accounting and advisory for Delhi NCR businesses.</p>
+                                        <ul class="contact-info list-unstyled mb-0">
+                                            <li class="d-flex align-items-center mb-2"><i class="ri-phone-line text_secondary me-2"></i><a href="tel:+919891464160" class="text-gray">+91 98914 64160</a></li>
+                                            <li class="d-flex align-items-center"><i class="ri-mail-line text_secondary me-2"></i><a href="mailto:info@elewareaccounting.com" class="text-gray">info@elewareaccounting.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="footer-widget mb-30" data-cue="slideInLeft" data-delay="100">
+                                        <h3 class="footer-widget-title fs-24 text-white mb-20">Quick Links</h3>
+                                        <ul class="footer-menu style-one list-unstyled mb-0">
+                                            <li class="d-block fs-xxl-18"><a href="index.html">Home</a></li>
+                                            <li class="d-block fs-xxl-18"><a href="about-us.html">About Us</a></li>
+                                            <li class="d-block fs-xxl-18"><a href="services.html">Services</a></li>
+                                            <li class="d-block fs-xxl-18"><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-5 col-lg-4 col-md-12">
+                                    <div class="footer-widget mb-30" data-cue="slideInLeft" data-delay="200">
+                                        <h3 class="footer-widget-title fs-24 text-white mb-20">Stay Connected</h3>
+                                        <p class="text-gray fs-xxl-18 mb-25">Subscribe for updates on finance, compliance, and advisory insights tailored for your business.</p>
+                                        <ul class="social-profile style-one list-unstyled d-flex align-items-center flex-wrap mb-0">
+                                            <li><a href="https://www.facebook.com/" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                            <li><a href="https://x.com/" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-twitter-x-line"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                            <li><a href="https://www.instagram.com/" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-instagram-line"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-bottom pt-35 pb-30 border-top border-opacity-10" style="border-color: rgba(232, 244, 246, 0.15);">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <p class="text-gray fs-xxl-16 mb-0">&copy; 2025 Eleware Accounting. All rights reserved.</p>
+                                </div>
+                                <div class="col-md-6 text-md-end">
+                                    <ul class="footer-menu list-unstyled d-flex align-items-center justify-content-md-end flex-wrap gap-3 mb-0">
+                                        <li><a href="privacy-policy.html" class="text-gray">Privacy Policy</a></li>
+                                        <li><a href="terms-conditions.html" class="text-gray">Terms &amp; Conditions</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer End -->
+
+            </div><!-- smooth-content end -->
+        </div><!-- smooth-wrapper end -->
+
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/919891464160?text=Hello%20Eleware%2C%20I%20need%20accounting%20assistance." class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+            <i class="ri-whatsapp-line"></i>
+        </a>
+
+        <!-- Back to Top -->
+        <div id="progress-wrap" class="progress-wrap style-one">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path id="progress-path" d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+            </svg>
+        </div>
+
+        <!-- JS Files -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/gsap.min.js"></script>
+        <script src="assets/js/scrollTrigger.min.js"></script>
+        <script src="assets/js/scrollToPlugin.js"></script>
+        <script src="assets/js/SplitText.min.js"></script>
+        <script src="assets/js/scrollcue.min.js"></script>
+        <script src="assets/js/lenis.min.js"></script>
+        <script src="assets/js/fslightbox.js"></script>
+        <script src="assets/js/customEase.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <script>
+            // FAQ Toggle Functionality
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.closest('.faq-item');
+                    const isActive = faqItem.classList.contains('active');
+                    
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    if (!isActive) {
+                        faqItem.classList.add('active');
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

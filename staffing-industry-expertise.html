@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Staffing Industry Expertise &mdash; Eleware Accounting | Specialized accounting, payroll, and compliance solutions for staffing firms and HR agencies.">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/scrollcue.min.css">
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/header.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/dark-theme.css">
+        <title>Staffing Industry Expertise &mdash; Eleware | Payroll &amp; Compliance Solutions</title>
+        <link rel="icon" type="image/png" href="assets/img/brand/logotab.png">
+        <style>
+            /* ============================================
+               STAFFING INDUSTRY EXPERTISE PAGE STYLES
+               ============================================ */
+
+            .sie-section-tag {
+                display: inline-block;
+                background: #edf7e8;
+                color: #00252C;
+                font-size: 11.5px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                padding: 5px 14px;
+                border-radius: 20px;
+                margin-bottom: 16px;
+            }
+
+            .sie-card {
+                background: #fff;
+                border-radius: 16px;
+                overflow: visible;
+                border: 1px solid #e4eaec;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                position: relative;
+                transition: transform 0.35s ease, box-shadow 0.35s ease;
+                padding: 26px 28px;
+            }
+
+            .sie-card::before {
+                content: "";
+                position: absolute;
+                top: 0; left: 0; right: 0;
+                height: 3px;
+                background: linear-gradient(90deg, #00252C, var(--secondaryColor, #7ED957));
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.4s ease;
+                z-index: 3;
+            }
+
+            .sie-card:hover::before { transform: scaleX(1); }
+            .sie-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 20px 50px rgba(0, 37, 44, 0.14);
+            }
+
+            .sie-card h4 {
+                font-size: 18px;
+                font-weight: 700;
+                color: #00252C;
+                margin-bottom: 12px;
+                line-height: 1.35;
+            }
+
+            .sie-card p {
+                font-size: 14px;
+                color: #5a6a72;
+                line-height: 1.7;
+                margin-bottom: 0;
+            }
+
+            .sie-divider {
+                height: 1px;
+                background: #edf1f3;
+                margin: 18px 0;
+            }
+
+            .sie-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .sie-list li {
+                display: flex;
+                align-items: flex-start;
+                gap: 9px;
+                margin-bottom: 9px;
+                font-size: 13.5px;
+                color: #3d5259;
+                line-height: 1.5;
+            }
+
+            .sie-list li:last-child { margin-bottom: 0; }
+            .sie-list li .sie-tick {
+                flex-shrink: 0;
+                width: 16px;
+                height: 16px;
+                margin-top: 2px;
+            }
+
+            /* Challenge Section */
+            .challenge-item {
+                display: flex;
+                gap: 20px;
+                margin-bottom: 30px;
+                padding: 24px;
+                background: #f9fffe;
+                border-radius: 12px;
+                border-left: 4px solid #7ED957;
+            }
+
+            .challenge-icon {
+                flex-shrink: 0;
+                font-size: 32px;
+                color: #7ED957;
+            }
+
+            .challenge-item h4 {
+                font-size: 16px;
+                font-weight: 700;
+                color: #00252C;
+                margin-bottom: 8px;
+            }
+
+            .challenge-item p {
+                font-size: 13.5px;
+                color: #6b7280;
+                line-height: 1.6;
+                margin-bottom: 0;
+            }
+
+            /* Solutions Grid */
+            .solution-card {
+                background: linear-gradient(135deg, #f9fffe 0%, #f0fbf9 100%);
+                border: 1px solid rgba(0,149,130,0.15);
+                border-radius: 16px;
+                padding: 30px;
+                text-align: center;
+                transition: transform 0.35s ease, box-shadow 0.35s ease;
+            }
+
+            .solution-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 15px 40px rgba(0, 149, 130, 0.12);
+            }
+
+            .solution-card .icon {
+                font-size: 42px;
+                color: #7ED957;
+                margin-bottom: 15px;
+                display: block;
+            }
+
+            .solution-card h4 {
+                font-size: 16px;
+                font-weight: 700;
+                color: #00252C;
+                margin-bottom: 10px;
+            }
+
+            .solution-card p {
+                font-size: 13.5px;
+                color: #6b7280;
+                line-height: 1.6;
+                margin-bottom: 0;
+            }
+
+            /* Stats Counter */
+            .sie-stats {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 30px;
+                text-align: center;
+            }
+
+            .sie-stat-item h3 {
+                font-size: 36px;
+                font-weight: 900;
+                color: #7ED957;
+                margin-bottom: 8px;
+            }
+
+            .sie-stat-item p {
+                font-size: 14px;
+                color: #6b7280;
+            }
+
+            /* Dark Mode */
+            .theme-dark .sie-card { background: #042a30; border-color: #0a404a; }
+            .theme-dark .sie-card h4 { color: #e8f4f6; }
+            .theme-dark .sie-card p { color: #8aacb4; }
+            .theme-dark .sie-list li { color: #9fbec6; }
+            .theme-dark .sie-divider { background: #0d4550; }
+            .theme-dark .sie-section-tag { background: rgba(126, 217, 87, 0.12); color: var(--secondaryColor, #7ED957); }
+            .theme-dark .challenge-item { background: rgba(0,37,44,0.3); border-left-color: #7ED957; }
+            .theme-dark .challenge-item h4 { color: #e8f4f6; }
+            .theme-dark .challenge-item p { color: #8aacb4; }
+            .theme-dark .solution-card { background: rgba(0,37,44,0.3); border-color: #0a404a; }
+            .theme-dark .solution-card h4 { color: #e8f4f6; }
+            .theme-dark .solution-card p { color: #8aacb4; }
+            .theme-dark .sie-stat-item h3 { color: #7ED957; }
+            .theme-dark .sie-stat-item p { color: #8aacb4; }
+
+            /* Staffing Section Dark Theme */
+            .theme-dark .sie-challenge-section,
+            .theme-dark .sie-solution-section {
+                background: linear-gradient(135deg, #042a30 0%, #06384a 100%) !important;
+                border-top-color: rgba(126, 217, 87, 0.15) !important;
+            }
+
+            .theme-dark .sie-challenge-section .section-title,
+            .theme-dark .sie-solution-section .section-title {
+                color: #e8f4f6;
+            }
+
+            .theme-dark .sie-challenge-section .fs-xxl-18,
+            .theme-dark .sie-solution-section .fs-xxl-18 {
+                color: #8aacb4;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Preloader -->
+        <div class="preloader-area" id="preloader">
+            <div class="spinner">
+                <div></div><div></div><div></div><div></div><div></div>
+            </div>
+        </div>
+
+        <!-- Theme Switcher -->
+        <div class="switch-theme-mode">
+            <label id="switch" class="switch">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <!-- Custom Cursor -->
+        <div class="cursor">
+            <span class="cursor-text d-flex flex-column align-items-center justify-content-center rounded-circle bg-white text-title fs-14 fw-semibold"></span>
+        </div>
+        <div class="cursor-inner"></div>
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <div class="bg-albastor position-relative z-1">
+
+                    <!-- Navbar Top -->
+                    <div class="navbar-top style-two position-relative z-2">
+                        <div class="container style-two">
+                            <div class="row">
+                                <div class="col-md-7 mb-sm-6">
+                                    <ul class="contact-info list-unstyled text-md-start text-center mb-0">
+                                        <li class="d-inline-block"><a href="tel:+919891464160" class="contact-num d-block fw-bold text_secondary link-hover-secondary">+91 98914 64160</a></li>
+                                        <li class="d-inline-block"><a href="mailto:info@elewareaccounting.com" class="contact-mail fw-normal text-white hover-text-secondary d-inline-block">Info<span class="text_secondary">@</span>elewareaccounting.com</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5">
+                                    <ul class="social-profile style-two list-unstyled text-md-end text-center mb-0">
+                                        <li><a href="https://www.facebook.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="https://x.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-twitter-x-line"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                        <li><a href="https://www.instagram.com/" target="_blank" class="d-flex flex-column align-items-center justify-content-center rounded-circle"><i class="ri-instagram-line"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navbar -->
+                    <div class="navbar-area style-four position-relative z-2" id="navbar">
+                        <div class="container style-two">
+                            <div class="navbar-wrapper d-flex justify-content-between align-items-center">
+                                <a href="index.html" class="navbar-brand">
+                                    <img src="assets/img/brand/logow.png" alt="Eleware Accounting">
+                                </a>
+                                <div class="menu-area mx-auto">
+                                    <div class="overlay"></div>
+                                    <nav class="menu">
+                                        <div class="menu-mobile-header">
+                                            <button type="button" class="menu-mobile-arrow bg-transparent border-0"><i class="ri-arrow-left-s-line"></i></button>
+                                            <div class="menu-mobile-title"></div>
+                                            <button type="button" class="menu-mobile-close bg-transparent border-0"><i class="ri-close-line"></i></button>
+                                        </div>
+                                        <ul class="menu-section p-0 mb-0 lh-1">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li class="position-relative group">
+                                                <a href="services.html">Services</a>
+                                                <ul class="submenu list-unstyled position-absolute p-0 mb-0">
+                                                    <li><span class="submenu-label">VCFO</span></li>
+                                                    <li><a href="staffing-industry-expertise.html">Staffing Industry Expertise</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="global-accounting-service.html">Global Accounting Service</a></li>
+                                            <li><a href="blog.html">Blogs</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="other-options d-flex flex-wrap align-items-center justify-content-end">
+                                    <div class="option-item d-lg-block d-none">
+                                        <a href="appointment.html" class="btn style-one d-inline-flex align-items-center">
+                                            <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                            <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Get A Free Consultation</span>
+                                            <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="option-item position-relative d-flex align-items-center">
+                                        <div class="mobile-options position-relative d-lg-none me-3">
+                                            <button class="dropdown-toggle text-center bg-transparent border-0 p-0 transition" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                                <i class="ri-more-fill"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-centered mobile-option-list top-1 border-0" data-bs-popper="static">
+                                                <a href="appointment.html" class="btn style-one d-inline-flex align-items-center">
+                                                    <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                                    <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Get A Free Consultation</span>
+                                                    <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="option-item d-lg-none">
+                                        <button type="button" class="menu-mobile-trigger">
+                                            <span></span><span></span><span></span><span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Breadcrumb -->
+                    <div class="breadcrumb-area style-one position-relative z-1">
+                        <div class="br-bg img-container position-absolute top-0 start-0 w-100">
+                            <img src="assets/compressed-files/hero1.jpeg" alt="Staffing Industry Expertise" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="container style-one">
+                            <div class="row">
+                                <div class="col-xxl-10 col-lg-8">
+                                    <h2 class="section-title style-three text-white fw-bold mb-20 reveal-text">Staffing Industry Expertise</h2>
+                                    <ul class="br-menu list-unstyled mb-0">
+                                        <li class="fs-xxl-18"><a href="index.html">Home</a></li>
+                                        <li class="fs-xxl-18">Staffing Industry Expertise</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Breadcrumb End -->
+
+                    <!-- Staffing Service Section Start -->
+                    <div class="pt-115 pb-90">
+                        <div class="container style-two">
+
+                            <!-- Section Heading -->
+                            <div class="row mb-60">
+                                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
+                                    <span class="sie-section-tag">Staffing Expertise</span>
+                                    <h2 class="section-title style-one fw-semibold title-anim mb-20">
+                                        Specialized Accounting for Staffing Firms
+                                    </h2>
+                                    <p class="fs-xxl-18">Tailored accounting, payroll, and compliance solutions designed specifically for staffing and recruitment agencies. Manage complexity with expertise.</p>
+                                </div>
+                            </div>
+
+                            <!-- Core Service Features -->
+                            <div class="row g-4">
+
+                                <!-- Feature 1: Payroll Management -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="sie-card">
+                                        <h4><i class="ri-bank-card-line" style="color:#7ED957;margin-right:8px;"></i>Multi-Tier Payroll Management</h4>
+                                        <p>Handle complex payroll for permanent staff, temporary workers, and contractors with automated deduction tracking and statutory compliance.</p>
+                                        <div class="sie-divider"></div>
+                                        <ul class="sie-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Automated Payroll Processing</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Contractor Management</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>PF, ESI, TDS Compliance</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 2: Revenue Recognition -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="sie-card">
+                                        <h4><i class="ri-bar-chart-2-line" style="color:#7ED957;margin-right:8px;"></i>Revenue & Billing Tracking</h4>
+                                        <p>Precise revenue recognition for placements, accurate billing by client and resource type, with commission tracking and invoice management.</p>
+                                        <div class="sie-divider"></div>
+                                        <ul class="sie-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Commission & Placement Tracking</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Client-wise Billing</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Revenue Recognition Compliance</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 3: Staffing Compliance -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="200">
+                                    <div class="sie-card">
+                                        <h4><i class="ri-shield-check-line" style="color:#7ED957;margin-right:8px;"></i>Industry Compliance</h4>
+                                        <p>Full compliance with staffing regulations, PWD certification, ISO compliance, and statutory audit readiness specific to recruitment agencies.</p>
+                                        <div class="sie-divider"></div>
+                                        <ul class="sie-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>PWD Compliance</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>ISO & Certification Support</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Audit Preparation</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 4: GST & Taxation -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="300">
+                                    <div class="sie-card">
+                                        <h4><i class="ri-file-text-line" style="color:#7ED957;margin-right:8px;"></i>GST & Tax Optimization</h4>
+                                        <p>Streamlined GST filing, monthly returns, and strategic tax planning to minimize liability while ensuring full regulatory compliance.</p>
+                                        <div class="sie-divider"></div>
+                                        <ul class="sie-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>GSTR Filing & ITC Management</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Tax Planning</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Notice Handling</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 5: MIS & Analytics -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="sie-card">
+                                        <h4><i class="ri-pie-chart-line" style="color:#7ED957;margin-right:8px;"></i>Business Analytics & MIS</h4>
+                                        <p>Real-time dashboards for profit margins by placement type, resource utilization rates, client profitability, and business health metrics.</p>
+                                        <div class="sie-divider"></div>
+                                        <ul class="sie-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Profitability Analysis</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Resource Utilization Tracking</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Monthly MIS Reports</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 6: Fund Management -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="sie-card">
+                                        <h4><i class="ri-wallet-line" style="color:#7ED957;margin-right:8px;"></i>Cash Flow & Fund Management</h4>
+                                        <p>Expert cash flow planning for seasonal variations, working capital management, and strategic financial advisory for growth.</p>
+                                        <div class="sie-divider"></div>
+                                        <ul class="sie-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Cash Flow Forecasting</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Working Capital Optimization</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="sie-tick"><span>Strategic Financial Advisory</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!-- End Features -->
+
+                        </div><!-- Container End -->
+                    </div>
+                    <!-- Staffing Service Section End -->
+
+                    <!-- Challenges Section -->
+                    <div class="sie-challenge-section pt-60 pb-90" style="background: linear-gradient(135deg, #f9fffe 0%, #f0fbf9 100%); border-top: 1px solid rgba(0,149,130,0.1);">
+                        <div class="container style-two">
+
+                            <div class="row mb-60">
+                                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
+                                    <span class="sie-section-tag">Your Challenges</span>
+                                    <h2 class="section-title style-one fw-semibold title-anim mb-20">
+                                        Common Staffing Industry Challenges
+                                    </h2>
+                                    <p class="fs-xxl-18">We understand the unique complexities staffing firms face. Here's how we solve them.</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="challenge-item" data-cue="slideInLeft" data-delay="0">
+                                        <div class="challenge-icon"><i class="ri-alert-line"></i></div>
+                                        <div>
+                                            <h4>Complex Multi-Level Payroll</h4>
+                                            <p>Managing payroll for permanent employees, contract workers, and temporary staff with different tax treatments is challenging.</p>
+                                        </div>
+                                    </div>
+                                    <div class="challenge-item" data-cue="slideInLeft" data-delay="100">
+                                        <div class="challenge-icon"><i class="ri-alert-line"></i></div>
+                                        <div>
+                                            <h4>Compliance & Regulatory Issues</h4>
+                                            <p>Navigating PWD quotas, TDS requirements, labor laws, and staffing-specific regulations is complex and error-prone.</p>
+                                        </div>
+                                    </div>
+                                    <div class="challenge-item" data-cue="slideInLeft" data-delay="200">
+                                        <div class="challenge-icon"><i class="ri-alert-line"></i></div>
+                                        <div>
+                                            <h4>Revenue Recognition Issues</h4>
+                                            <p>Accurately tracking placement commissions and revenue by client or resource type requires specialized expertise.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="challenge-item" data-cue="slideInRight" data-delay="0">
+                                        <div class="challenge-icon"><i class="ri-alert-line"></i></div>
+                                        <div>
+                                            <h4>Seasonal Cash Flow Swings</h4>
+                                            <p>Staffing revenues fluctuate seasonally, making cash flow forecasting and working capital management critical.</p>
+                                        </div>
+                                    </div>
+                                    <div class="challenge-item" data-cue="slideInRight" data-delay="100">
+                                        <div class="challenge-icon"><i class="ri-alert-line"></i></div>
+                                        <div>
+                                            <h4>Limited Business Visibility</h4>
+                                            <p>Without proper MIS and analytics, you can't see which clients or placements are most profitable.</p>
+                                        </div>
+                                    </div>
+                                    <div class="challenge-item" data-cue="slideInRight" data-delay="200">
+                                        <div class="challenge-icon"><i class="ri-alert-line"></i></div>
+                                        <div>
+                                            <h4>Audit & Certification Readiness</h4>
+                                            <p>Preparing for statutory audits and maintaining ISO or other certifications requires specialized knowledge.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Challenges Section End -->
+
+                    <!-- Solutions Section -->
+                    <div class="sie-solution-section pt-90 pb-90">
+                        <div class="container style-two">
+
+                            <div class="row mb-60">
+                                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
+                                    <span class="sie-section-tag">Our Solutions</span>
+                                    <h2 class="section-title style-one fw-semibold title-anim mb-20">
+                                        How We Help Staffing Firms Succeed
+                                    </h2>
+                                    <p class="fs-xxl-18">Tailored solutions built for the unique needs of staffing and recruitment agencies.</p>
+                                </div>
+                            </div>
+
+                            <div class="row g-4 mb-60">
+                                <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="solution-card">
+                                        <span class="icon"><i class="ri-check-double-line"></i></span>
+                                        <h4>End-to-End Payroll Automation</h4>
+                                        <p>Automated, error-free payroll processing for all worker categories with real-time compliance tracking.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="solution-card">
+                                        <span class="icon"><i class="ri-shield-check-line"></i></span>
+                                        <h4>Regulatory Compliance</h4>
+                                        <p>ICAI-qualified CAs handling all compliance requirements with zero penalties and 100% audit readiness.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-delay="200">
+                                    <div class="solution-card">
+                                        <span class="icon"><i class="ri-bar-chart-box-line"></i></span>
+                                        <h4>Real-Time Business Analytics</h4>
+                                        <p>Monthly MIS dashboards showing profitability by placement type, client, and resource utilization rates.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-delay="300">
+                                    <div class="solution-card">
+                                        <span class="icon"><i class="ri-bank-card-line"></i></span>
+                                        <h4>Cash Flow Management</h4>
+                                        <p>Strategic working capital planning and forecasting to handle seasonal variations smoothly.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-delay="400">
+                                    <div class="solution-card">
+                                        <span class="icon"><i class="ri-file-check-line"></i></span>
+                                        <h4>Audit & Certification Support</h4>
+                                        <p>Complete preparation for statutory audits, ISO compliance, and other certification requirements.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-delay="500">
+                                    <div class="solution-card">
+                                        <span class="icon"><i class="ri-team-line"></i></span>
+                                        <h4>Strategic Advisory</h4>
+                                        <p>Dedicated support from CA-qualified professionals with deep staffing industry knowledge.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Solutions Section End -->
+
+                    <!-- Stats Section -->
+                    <div class="pt-90 pb-90" style="background: linear-gradient(135deg, #f9fffe 0%, #f0fbf9 100%); border-top: 1px solid rgba(0,149,130,0.1);">
+                        <div class="container style-two">
+
+                            <div class="row mb-60">
+                                <div class="col-12 text-center" data-cue="slideInDown">
+                                    <span class="sie-section-tag">Our Impact</span>
+                                    <h2 class="section-title style-one fw-semibold title-anim">Staffing Firms We've Helped</h2>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1">
+                                    <div class="sie-stats">
+                                        <div class="sie-stat-item" data-cue="slideInUp" data-delay="0">
+                                            <h3>15+</h3>
+                                            <p>Staffing Agencies Served</p>
+                                        </div>
+                                        <div class="sie-stat-item" data-cue="slideInUp" data-delay="100">
+                                            <h3>50K+</h3>
+                                            <p>Payroll Transactions Processed</p>
+                                        </div>
+                                        <div class="sie-stat-item" data-cue="slideInUp" data-delay="200">
+                                            <h3>₹100Cr+</h3>
+                                            <p>Revenue Managed</p>
+                                        </div>
+                                        <div class="sie-stat-item" data-cue="slideInUp" data-delay="300">
+                                            <h3>0</h3>
+                                            <p>Compliance Penalties</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Stats End -->
+
+                    <!-- CTA Section -->
+                    <div class="pt-90 pb-90">
+                        <div class="container style-two">
+                            <div class="row">
+                                <div class="col-lg-8 offset-lg-2 text-center" data-cue="slideInUp">
+                                    <h2 class="section-title style-one fw-semibold mb-35">Ready to Simplify Your Staffing Accounting?</h2>
+                                    <p class="fs-xxl-18 mb-40">Let's discuss how Eleware can handle your payroll, compliance, and financial management so you can focus on growing your staffing business.</p>
+                                    <a href="appointment.html" class="btn style-one d-inline-flex align-items-center">
+                                        <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                        <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Schedule a Consultation</span>
+                                        <span class="btn-icon-two d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CTA Section End -->
+
+                </div><!-- .bg-albastor end -->
+
+                <!-- Footer -->
+                <footer class="footer-area style-one">
+                    <div class="container style-one">
+                        <div class="footer-top pt-115">
+                            <div class="row mb-65">
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="footer-widget mb-30" data-cue="slideInLeft">
+                                        <a href="index.html" class="logo d-block mb-30">
+                                            <img src="assets/img/brand/logow.png" alt="Eleware Accounting">
+                                        </a>
+                                        <p class="text-gray fs-xxl-18 mb-25">Clarity in Numbers. Confidence in Growth. Trusted accounting and advisory for Delhi NCR businesses.</p>
+                                        <ul class="contact-info list-unstyled mb-0">
+                                            <li class="d-flex align-items-center mb-2"><i class="ri-phone-line text_secondary me-2"></i><a href="tel:+919891464160" class="text-gray">+91 98914 64160</a></li>
+                                            <li class="d-flex align-items-center"><i class="ri-mail-line text_secondary me-2"></i><a href="mailto:info@elewareaccounting.com" class="text-gray">info@elewareaccounting.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="footer-widget mb-30" data-cue="slideInLeft" data-delay="100">
+                                        <h3 class="footer-widget-title fs-24 text-white mb-20">Quick Links</h3>
+                                        <ul class="footer-menu style-one list-unstyled mb-0">
+                                            <li class="d-block fs-xxl-18"><a href="index.html">Home</a></li>
+                                            <li class="d-block fs-xxl-18"><a href="about-us.html">About Us</a></li>
+                                            <li class="d-block fs-xxl-18"><a href="services.html">Services</a></li>
+                                            <li class="d-block fs-xxl-18"><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-5 col-lg-4 col-md-12">
+                                    <div class="footer-widget mb-30" data-cue="slideInLeft" data-delay="200">
+                                        <h3 class="footer-widget-title fs-24 text-white mb-20">Stay Connected</h3>
+                                        <p class="text-gray fs-xxl-18 mb-25">Subscribe for updates on finance, compliance, and advisory insights tailored for your business.</p>
+                                        <ul class="social-profile style-one list-unstyled d-flex align-items-center flex-wrap mb-0">
+                                            <li><a href="https://www.facebook.com/" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                            <li><a href="https://x.com/" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-twitter-x-line"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                            <li><a href="https://www.instagram.com/" target="_blank" class="d-flex align-items-center justify-content-center rounded-circle"><i class="ri-instagram-line"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-bottom pt-35 pb-30 border-top border-opacity-10" style="border-color: rgba(232, 244, 246, 0.15);">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <p class="text-gray fs-xxl-16 mb-0">&copy; 2025 Eleware Accounting. All rights reserved.</p>
+                                </div>
+                                <div class="col-md-6 text-md-end">
+                                    <ul class="footer-menu list-unstyled d-flex align-items-center justify-content-md-end flex-wrap gap-3 mb-0">
+                                        <li><a href="privacy-policy.html" class="text-gray">Privacy Policy</a></li>
+                                        <li><a href="terms-conditions.html" class="text-gray">Terms &amp; Conditions</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer End -->
+
+            </div><!-- smooth-content end -->
+        </div><!-- smooth-wrapper end -->
+
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/919891464160?text=Hello%20Eleware%2C%20I%20need%20accounting%20assistance." class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+            <i class="ri-whatsapp-line"></i>
+        </a>
+
+        <!-- Back to Top -->
+        <div id="progress-wrap" class="progress-wrap style-one">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path id="progress-path" d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+            </svg>
+        </div>
+
+        <!-- JS Files -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/gsap.min.js"></script>
+        <script src="assets/js/scrollTrigger.min.js"></script>
+        <script src="assets/js/scrollToPlugin.js"></script>
+        <script src="assets/js/SplitText.min.js"></script>
+        <script src="assets/js/scrollcue.min.js"></script>
+        <script src="assets/js/lenis.min.js"></script>
+        <script src="assets/js/fslightbox.js"></script>
+        <script src="assets/js/customEase.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

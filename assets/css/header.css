@@ -649,6 +649,80 @@
   .navbar-area.style-one .menu > ul > li > a.active, .navbar-area.style-one .menu > ul > li > a:hover {
     color: var(--secondaryColor);
   }
+
+  /* Submenu Styles */
+  .navbar-area .menu .menu-section li.group {
+    position: relative;
+  }
+
+  .navbar-area .menu .menu-section li.group .submenu {
+    display: none;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 8px 20px rgba(0, 37, 44, 0.12);
+    z-index: 1000;
+  }
+
+  .navbar-area.style-one .menu > ul > li.group:hover .submenu {
+    display: block;
+    animation: slideInDown 0.3s ease-out;
+  }
+
+  .navbar-area .menu .submenu li {
+    list-style: none;
+  }
+
+  .navbar-area .menu .submenu li a {
+    display: block;
+    padding: 12px 16px;
+    color: #00252C;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-area .menu .submenu li a:hover {
+    background-color: #edf7e8;
+    color: #7ED957;
+    padding-left: 20px;
+  }
+
+  .navbar-area .menu .submenu li .submenu-label {
+    display: block;
+    padding: 12px 16px;
+    color: #999;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  .navbar-area .menu .submenu li:first-child {
+    border-bottom: 1px solid #e4eaec;
+  }
+
+  /* Dark Theme Submenu */
+  .theme-dark .navbar-area .menu .menu-section li.group .submenu {
+    background-color: #042a30;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .theme-dark .navbar-area .menu .submenu li a {
+    color: #e8f4f6;
+  }
+
+  .theme-dark .navbar-area .menu .submenu li a:hover {
+    background-color: rgba(126, 217, 87, 0.12);
+    color: #7ED957;
+  }
+
+  .theme-dark .navbar-area .menu .submenu li:first-child {
+    border-bottom-color: #0a404a;
+  }
   .navbar-area.style-one .menu > ul > li > a.active:after, .navbar-area.style-one .menu > ul > li > a:hover:after {
     transform: scaleX(1);
     transform-origin: left;

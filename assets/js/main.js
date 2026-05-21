@@ -748,6 +748,27 @@
         });
     });
 
+    // -------------------
+    // Submenu hover effect
+    // -------------------
+    const submenuItems = document.querySelectorAll('.menu-section .group');
+
+    submenuItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            const submenu = item.querySelector('.submenu');
+            if (submenu) {
+                submenu.style.display = 'block';
+            }
+        });
+
+        item.addEventListener('mouseleave', () => {
+            const submenu = item.querySelector('.submenu');
+            if (submenu) {
+                submenu.style.display = 'none';
+            }
+        });
+    });
+
 try {
 
     // function to set a given theme/color-scheme
