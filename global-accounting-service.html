@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Global Accounting Service &mdash; Eleware Accounting | Multi-jurisdictional accounting, international tax compliance, and cross-border financial solutions for growing businesses.">
+        <meta name="description" content="Global Accounting Service &mdash; Eleware Accounting | Comprehensive US accounting, bookkeeping, payroll, tax compliance, and strategic advisory services for American businesses.">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         <link rel="stylesheet" href="assets/css/scrollcue.min.css">
@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="assets/css/footer.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
         <link rel="stylesheet" href="assets/css/dark-theme.css">
-        <title>Global Accounting Service &mdash; Eleware | Multi-jurisdictional Tax &amp; Compliance</title>
+        <title>Global Accounting Service &mdash; Eleware | US Accounting, Payroll &amp; Tax Compliance</title>
         <link rel="icon" type="image/png" href="assets/img/brand/logotab.png">
         <style>
             /* ============================================
@@ -56,6 +56,7 @@
                 transform-origin: left;
                 transition: transform 0.4s ease;
                 z-index: 3;
+                border-radius: 16px 16px 0 0;
             }
 
             .gas-card:hover::before { transform: scaleX(1); }
@@ -65,15 +66,15 @@
             }
 
             .gas-card h4 {
-                font-size: 18px;
+                font-size: 17px;
                 font-weight: 700;
                 color: #00252C;
-                margin-bottom: 12px;
+                margin-bottom: 10px;
                 line-height: 1.35;
             }
 
             .gas-card p {
-                font-size: 14px;
+                font-size: 13.5px;
                 color: #5a6a72;
                 line-height: 1.7;
                 margin-bottom: 0;
@@ -82,7 +83,7 @@
             .gas-divider {
                 height: 1px;
                 background: #edf1f3;
-                margin: 18px 0;
+                margin: 14px 0;
             }
 
             .gas-list {
@@ -95,8 +96,8 @@
                 display: flex;
                 align-items: flex-start;
                 gap: 9px;
-                margin-bottom: 9px;
-                font-size: 13.5px;
+                margin-bottom: 7px;
+                font-size: 13px;
                 color: #3d5259;
                 line-height: 1.5;
             }
@@ -104,9 +105,19 @@
             .gas-list li:last-child { margin-bottom: 0; }
             .gas-list li .gas-tick {
                 flex-shrink: 0;
-                width: 16px;
-                height: 16px;
+                width: 15px;
+                height: 15px;
                 margin-top: 2px;
+            }
+
+            /* Category Section with alternate bg */
+            .gas-category-section {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+            .gas-category-alt {
+                background: linear-gradient(135deg, #f9fffe 0%, #f0fbf9 100%);
+                border-top: 1px solid rgba(0,149,130,0.1);
             }
 
             /* Process Flow Section */
@@ -225,27 +236,31 @@
             }
 
             /* Dark Mode */
-            .theme-dark .gas-card { background: #042a30; border-color: #0a404a; }
+            .theme-dark .gas-card { background: #111; border-color: #222; }
             .theme-dark .gas-card h4 { color: #e8f4f6; }
             .theme-dark .gas-card p { color: #8aacb4; }
             .theme-dark .gas-list li { color: #9fbec6; }
-            .theme-dark .gas-divider { background: #0d4550; }
+            .theme-dark .gas-divider { background: #222; }
             .theme-dark .gas-section-tag { background: rgba(126, 217, 87, 0.12); color: var(--secondaryColor, #7ED957); }
             .theme-dark .process-step h4 { color: #e8f4f6; }
             .theme-dark .process-step p { color: #8aacb4; }
-            .theme-dark .process-step-icon { background: rgba(126, 217, 87, 0.12); border-color: var(--secondaryColor, #7ED957); }
-            .theme-dark .benefit-card { background: rgba(0,37,44,0.3); border-color: #0a404a; }
+            .theme-dark .process-step-icon { background: rgba(126, 217, 87, 0.12); border-color: var(--secondaryColor, #7ED957); color: #e8f4f6; }
+            .theme-dark .benefit-card { background: #111; border-color: #222; }
             .theme-dark .benefit-card h4 { color: #e8f4f6; }
             .theme-dark .benefit-card p { color: #8aacb4; }
-            .theme-dark .faq-item { background: #042a30; border-color: #0a404a; }
-            .theme-dark .faq-item:hover { box-shadow: 0 8px 20px rgba(126, 217, 87, 0.12); }
+            .theme-dark .faq-item { background: #111; border-color: #222; }
+            .theme-dark .faq-item:hover { box-shadow: 0 8px 20px rgba(126, 217, 87, 0.08); }
             .theme-dark .faq-question { color: #e8f4f6; }
             .theme-dark .faq-answer { color: #8aacb4; }
 
-            /* Process & FAQ Section Dark Theme Background */
+            .theme-dark .gas-category-alt {
+                background: #000 !important;
+                border-top-color: rgba(126, 217, 87, 0.15) !important;
+            }
+
             .theme-dark .gas-process-section,
             .theme-dark .gas-faq-section {
-                background: linear-gradient(135deg, #042a30 0%, #06384a 100%) !important;
+                background: #000 !important;
                 border-top-color: rgba(126, 217, 87, 0.15) !important;
             }
 
@@ -411,128 +426,511 @@
                     </div>
                     <!-- Breadcrumb End -->
 
-                    <!-- Global Accounting Service Section Start -->
-                    <div class="pt-115 pb-90">
-                        <div class="container style-two">
 
-                            <!-- Section Heading -->
+                    <!-- ============================================================
+                         SECTION 1: CORE ACCOUNTING & BOOKKEEPING (6 cards)
+                         ============================================================ -->
+                    <div class="gas-category-section">
+                        <div class="container style-two">
                             <div class="row mb-60">
                                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
-                                    <span class="gas-section-tag">International Expertise</span>
+                                    <span class="gas-section-tag">Core Accounting & Bookkeeping</span>
                                     <h2 class="section-title style-one fw-semibold title-anim mb-20">
-                                        International Business Made Local
+                                        Comprehensive US Accounting & Financial Services
                                     </h2>
-                                    <p class="fs-xxl-18">Expand globally with confidence. Our ICAI-certified expertise spans multi-jurisdictional accounting, cross-border compliance, and strategic international tax planning.</p>
+                                    <p class="fs-xxl-18">Outsourced accounting, bookkeeping, payroll, tax compliance, and strategic advisory tailored for US businesses — delivered by experienced professionals.</p>
                                 </div>
                             </div>
 
-                            <!-- Core Service Features -->
-                            <div class="row g-4 mb-4">
-
-                                <!-- Feature 1: Multi-Currency Accounting -->
+                            <div class="row g-4">
+                                <!-- 1. Bookkeeping Services -->
                                 <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
                                     <div class="gas-card">
-                                        <h4><i class="ri-exchange-2-line" style="color:#7ED957;margin-right:8px;"></i>Multi-Currency Accounting</h4>
-                                        <p>Real-time currency conversion, FX gain/loss tracking, and consolidated reporting across multiple jurisdictions and currencies.</p>
+                                        <h4><i class="ri-book-open-line" style="color:#7ED957;margin-right:8px;"></i>Bookkeeping Services</h4>
+                                        <p>Accurate recording and maintenance of daily financial transactions to keep your books clean and current.</p>
                                         <div class="gas-divider"></div>
                                         <ul class="gas-list">
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Live FX Rate Integration</span></li>
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Currency-wise Reporting</span></li>
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Hedging Advice</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Daily Transaction Recording</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Categorization & Classification</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Month-end Close Support</span></li>
                                         </ul>
                                     </div>
                                 </div>
 
-                                <!-- Feature 2: International Tax Planning -->
+                                <!-- 2. General Ledger Management -->
                                 <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
                                     <div class="gas-card">
-                                        <h4><i class="ri-global-line" style="color:#7ED957;margin-right:8px;"></i>International Tax Planning</h4>
-                                        <p>Strategic tax optimization across multiple countries, transfer pricing compliance, and treaty utilization to minimize global tax burden.</p>
+                                        <h4><i class="ri-file-list-3-line" style="color:#7ED957;margin-right:8px;"></i>General Ledger Management</h4>
+                                        <p>Organized ledger review, posting, and reconciliation ensuring your financial records are always balanced.</p>
                                         <div class="gas-divider"></div>
                                         <ul class="gas-list">
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Transfer Pricing Documentation</span></li>
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Tax Treaty Analysis</span></li>
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Advance Pricing Agreements</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Journal Entries & Postings</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Ledger Review & Balancing</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Period-end Reconciliation</span></li>
                                         </ul>
                                     </div>
                                 </div>
 
-                                <!-- Feature 3: Overseas Client Management -->
+                                <!-- 3. Accounts Payable Management -->
                                 <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="200">
                                     <div class="gas-card">
-                                        <h4><i class="ri-team-line" style="color:#7ED957;margin-right:8px;"></i>Overseas Client Management</h4>
-                                        <p>Dedicated support for managing clients across US, UK, Middle East, and other international markets with compliance in each region.</p>
+                                        <h4><i class="ri-money-dollar-circle-line" style="color:#7ED957;margin-right:8px;"></i>Accounts Payable Management</h4>
+                                        <p>Vendor invoice processing and payment management to maintain healthy supplier relationships and cash flow.</p>
                                         <div class="gas-divider"></div>
                                         <ul class="gas-list">
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Multi-country Payroll</span></li>
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Regional Tax Filings</span></li>
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Local Compliance</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div><!-- End Row 1 -->
-
-                            <!-- Row 2: More Features -->
-                            <div class="row g-4 mb-60">
-
-                                <!-- Feature 4: Documentation & Reporting -->
-                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="300">
-                                    <div class="gas-card">
-                                        <h4><i class="ri-file-text-line" style="color:#7ED957;margin-right:8px;"></i>Cross-Border Documentation</h4>
-                                        <p>Complete documentation management for international transactions, FEMA compliance, and customs documentation support.</p>
-                                        <div class="gas-divider"></div>
-                                        <ul class="gas-list">
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>FEMA Compliance</span></li>
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Invoice Management</span></li>
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Customs Documentation</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Invoice Processing & Approvals</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Payment Scheduling</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Vendor Management</span></li>
                                         </ul>
                                     </div>
                                 </div>
 
-                                <!-- Feature 5: Subsidiary Management -->
+                                <!-- 4. Accounts Receivable Management -->
                                 <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
                                     <div class="gas-card">
-                                        <h4><i class="ri-building-2-line" style="color:#7ED957;margin-right:8px;"></i>Foreign Subsidiary Support</h4>
-                                        <p>End-to-end accounting for overseas subsidiaries including statutory filings, consolidation, and inter-company reconciliation.</p>
+                                        <h4><i class="ri-bank-card-line" style="color:#7ED957;margin-right:8px;"></i>Accounts Receivable Management</h4>
+                                        <p>Customer invoicing, collections, and receivable tracking to optimize your revenue cycle and reduce DSO.</p>
                                         <div class="gas-divider"></div>
                                         <ul class="gas-list">
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Subsidiary Accounting</span></li>
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Inter-company Reconciliation</span></li>
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Consolidated Reporting</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Customer Invoicing</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Collections Follow-up</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Aging Analysis</span></li>
                                         </ul>
                                     </div>
                                 </div>
 
-                                <!-- Feature 6: 24/7 Timezone Support -->
+                                <!-- 5. Bank & Credit Card Reconciliation -->
                                 <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
                                     <div class="gas-card">
-                                        <h4><i class="ri-time-line" style="color:#7ED957;margin-right:8px;"></i>24/7 Global Support</h4>
-                                        <p>Round-the-clock support across IST, EST, MST, CST, PST, and CTE zones ensuring your queries are answered anytime, anywhere.</p>
+                                        <h4><i class="ri-exchange-funds-line" style="color:#7ED957;margin-right:8px;"></i>Bank & Credit Card Reconciliation</h4>
+                                        <p>Reconciliation of financial transactions and balances ensuring every dollar is accounted for accurately.</p>
                                         <div class="gas-divider"></div>
                                         <ul class="gas-list">
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Multiple Timezone Coverage</span></li>
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Quick-turnaround Responses</span></li>
-                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Dedicated Account Managers</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Bank Statement Matching</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Credit Card Reconciliation</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Discrepancy Resolution</span></li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div><!-- End Row 2 -->
 
-                        </div><!-- Container End -->
+                                <!-- 6. Expense Recording & Financial Controls -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="200">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-shield-check-line" style="color:#7ED957;margin-right:8px;"></i>Expense Recording & Controls</h4>
+                                        <p>Proper expense classification and monitoring with robust financial controls to safeguard your business.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Expense Categorization</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Budget Monitoring</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Internal Controls</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Global Accounting Section End -->
 
-                    <!-- Process Section -->
-                    <div class="gas-process-section pt-60 pb-90" style="background: linear-gradient(135deg, #f9fffe 0%, #f0fbf9 100%); border-top: 1px solid rgba(0,149,130,0.1);">
+
+                    <!-- ============================================================
+                         SECTION 2: PAYROLL & EMPLOYEE ACCOUNTING (4 cards)
+                         ============================================================ -->
+                    <div class="gas-category-section gas-category-alt">
                         <div class="container style-two">
+                            <div class="row mb-60">
+                                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
+                                    <span class="gas-section-tag">Payroll & Employee Accounting</span>
+                                    <h2 class="section-title style-one fw-semibold title-anim mb-20">
+                                        End-to-End Payroll & Workforce Accounting
+                                    </h2>
+                                    <p class="fs-xxl-18">Complete payroll management, tax compliance, benefits accounting, and year-end reporting for your entire workforce.</p>
+                                </div>
+                            </div>
 
+                            <div class="row g-4">
+                                <!-- 7. Payroll Processing -->
+                                <div class="col-xl-3 col-lg-6 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-wallet-3-line" style="color:#7ED957;margin-right:8px;"></i>Payroll Processing</h4>
+                                        <p>End-to-end payroll management with accurate salary calculations and timely processing.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Salary Computation</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Direct Deposit Processing</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Pay Stub Generation</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 8. Payroll Tax Compliance -->
+                                <div class="col-xl-3 col-lg-6 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-file-text-line" style="color:#7ED957;margin-right:8px;"></i>Payroll Tax Compliance</h4>
+                                        <p>Federal and state payroll tax calculations and filings to keep you compliant year-round.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Federal & State Tax Filings</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Quarterly 941 Filings</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>SUTA / FUTA Compliance</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 9. Employee Benefits & Reimbursement -->
+                                <div class="col-xl-3 col-lg-6 col-md-6" data-cue="slideInUp" data-delay="200">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-heart-pulse-line" style="color:#7ED957;margin-right:8px;"></i>Benefits & Reimbursement</h4>
+                                        <p>Benefits accounting and expense reimbursements handled with precision and compliance.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Benefits Tracking</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Reimbursement Processing</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Deduction Management</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 10. W-2 & 1099 Preparation -->
+                                <div class="col-xl-3 col-lg-6 col-md-6" data-cue="slideInUp" data-delay="300">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-file-paper-2-line" style="color:#7ED957;margin-right:8px;"></i>W-2 & 1099 Preparation</h4>
+                                        <p>Year-end employee and contractor reporting with accurate form generation and filing.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>W-2 Generation</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>1099-NEC / MISC Filing</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Year-end Reconciliation</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- ============================================================
+                         SECTION 3: FINANCIAL REPORTING (5 cards)
+                         ============================================================ -->
+                    <div class="gas-category-section">
+                        <div class="container style-two">
+                            <div class="row mb-60">
+                                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
+                                    <span class="gas-section-tag">Financial Reporting</span>
+                                    <h2 class="section-title style-one fw-semibold title-anim mb-20">
+                                        Actionable Financial Reports & Insights
+                                    </h2>
+                                    <p class="fs-xxl-18">Clear, timely financial statements and custom dashboards that give you full visibility into your business performance.</p>
+                                </div>
+                            </div>
+
+                            <div class="row g-4">
+                                <!-- 11. Profit & Loss -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-line-chart-line" style="color:#7ED957;margin-right:8px;"></i>Profit & Loss Statements</h4>
+                                        <p>Accurate income and expense reporting to understand your profitability at every level.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Revenue Analysis</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Expense Breakdown</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Trend Reporting</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 12. Balance Sheet -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-scales-3-line" style="color:#7ED957;margin-right:8px;"></i>Balance Sheet Preparation</h4>
+                                        <p>Financial position reporting and analysis for a complete snapshot of your business health.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Asset & Liability Tracking</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Equity Reporting</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Period Comparisons</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 13. Cash Flow -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="200">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-funds-line" style="color:#7ED957;margin-right:8px;"></i>Cash Flow Statements</h4>
+                                        <p>Cash movement tracking and forecasting so you always know where your money is going.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Operating Cash Flows</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Investment Tracking</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Financing Activities</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 14. Monthly MIS -->
+                                <div class="col-xl-6 col-lg-6 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-dashboard-3-line" style="color:#7ED957;margin-right:8px;"></i>Monthly Financial Reporting (MIS)</h4>
+                                        <p>Customized management reports and dashboards delivering the KPIs and metrics that matter most to your business decisions.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>KPI Dashboards</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Variance Analysis</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Executive Summaries</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 15. Budgeting & Forecasting -->
+                                <div class="col-xl-6 col-lg-6 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-bar-chart-grouped-line" style="color:#7ED957;margin-right:8px;"></i>Budgeting & Forecasting</h4>
+                                        <p>Financial planning and performance projections to help you set targets, allocate resources, and plan for growth strategically.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Annual Budgets</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Rolling Forecasts</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Scenario Analysis</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- ============================================================
+                         SECTION 4: TAX & COMPLIANCE SUPPORT (5 cards)
+                         ============================================================ -->
+                    <div class="gas-category-section gas-category-alt">
+                        <div class="container style-two">
+                            <div class="row mb-60">
+                                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
+                                    <span class="gas-section-tag">Tax & Compliance Support</span>
+                                    <h2 class="section-title style-one fw-semibold title-anim mb-20">
+                                        US Tax Compliance Made Simple
+                                    </h2>
+                                    <p class="fs-xxl-18">Stay ahead of federal, state, and IRS requirements with proactive tax compliance and filing support from experienced professionals.</p>
+                                </div>
+                            </div>
+
+                            <div class="row g-4">
+                                <!-- 16. Sales Tax Compliance -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-percent-line" style="color:#7ED957;margin-right:8px;"></i>Sales Tax Compliance</h4>
+                                        <p>Sales tax calculation, filing, and reconciliation across all applicable jurisdictions.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Nexus Determination</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Filing & Remittance</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Audit Support</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 17. Tax-Ready Financials -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-file-check-line" style="color:#7ED957;margin-right:8px;"></i>Tax-Ready Financials</h4>
+                                        <p>Preparation of books for CPA / tax filing support so your year-end is smooth and stress-free.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Year-end Adjustments</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Schedule Preparation</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>CPA Coordination</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 18. 1099 Filing Support -->
+                                <div class="col-xl-4 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="200">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-file-paper-line" style="color:#7ED957;margin-right:8px;"></i>1099 Filing Support</h4>
+                                        <p>Vendor reporting and IRS compliance support for accurate contractor and vendor payments.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Vendor Classification</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>1099 Preparation</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>IRS Submission</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 19. IRS Notice & Compliance -->
+                                <div class="col-xl-6 col-lg-6 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-mail-warning-line" style="color:#7ED957;margin-right:8px;"></i>IRS Notice & Compliance Assistance</h4>
+                                        <p>Professional support for IRS notices and documentation — timely responses and resolution tracking to protect your business.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Notice Response</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Documentation Preparation</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Resolution Tracking</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 20. Multi-State Compliance -->
+                                <div class="col-xl-6 col-lg-6 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-map-pin-2-line" style="color:#7ED957;margin-right:8px;"></i>Multi-State Compliance Support</h4>
+                                        <p>State-level accounting and tax compliance assistance for businesses operating across multiple US states.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>State Registrations</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Multi-state Filings</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Nexus Tracking</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- ============================================================
+                         SECTION 5: SPECIALIZED US ACCOUNTING (8 cards)
+                         ============================================================ -->
+                    <div class="gas-category-section">
+                        <div class="container style-two">
+                            <div class="row mb-60">
+                                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
+                                    <span class="gas-section-tag">Specialized US Accounting</span>
+                                    <h2 class="section-title style-one fw-semibold title-anim mb-20">
+                                        Advanced & Specialized Accounting Solutions
+                                    </h2>
+                                    <p class="fs-xxl-18">From QuickBooks management to Virtual CFO support — tailored solutions that go beyond routine accounting for US businesses.</p>
+                                </div>
+                            </div>
+
+                            <div class="row g-4">
+                                <!-- 21. QuickBooks -->
+                                <div class="col-xl-3 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-calculator-line" style="color:#7ED957;margin-right:8px;"></i>QuickBooks Accounting</h4>
+                                        <p>Setup, bookkeeping, and reporting in QuickBooks — your go-to platform managed by experts.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Setup & Configuration</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Ongoing Bookkeeping</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Custom Reports</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 22. Catch-up & Clean-up -->
+                                <div class="col-xl-3 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-eraser-line" style="color:#7ED957;margin-right:8px;"></i>Catch-up & Clean-up</h4>
+                                        <p>Rectification of pending or inaccurate books — get back on track quickly and accurately.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Historical Data Entry</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Error Correction</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Account Reconciliation</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 23. Intercompany Accounting -->
+                                <div class="col-xl-3 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="200">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-building-2-line" style="color:#7ED957;margin-right:8px;"></i>Intercompany Accounting</h4>
+                                        <p>Accounting for group companies and related-party transactions with full transparency.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Intercompany Entries</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Transfer Pricing</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Elimination Entries</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 24. Revenue Recognition -->
+                                <div class="col-xl-3 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="300">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-bar-chart-2-line" style="color:#7ED957;margin-right:8px;"></i>Revenue Recognition</h4>
+                                        <p>Compliance-based income recognition following ASC 606 and applicable US GAAP standards.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>ASC 606 Compliance</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Contract Analysis</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Revenue Scheduling</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 25. Audit Support -->
+                                <div class="col-xl-3 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-search-eye-line" style="color:#7ED957;margin-right:8px;"></i>Audit Support & Review</h4>
+                                        <p>Documentation and reporting support for audits — be ready for any review or examination.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Audit Schedules</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Workpaper Preparation</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Auditor Coordination</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 26. Controller / Virtual CFO -->
+                                <div class="col-xl-3 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-user-star-line" style="color:#7ED957;margin-right:8px;"></i>Controller / Virtual CFO</h4>
+                                        <p>Strategic financial oversight and advisory — C-suite financial leadership without the full-time cost.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Financial Strategy</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Board Reporting</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>KPI Monitoring</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 27. Cash Flow & Working Capital -->
+                                <div class="col-xl-3 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="200">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-money-dollar-box-line" style="color:#7ED957;margin-right:8px;"></i>Cash Flow & Working Capital</h4>
+                                        <p>Financial planning for business growth — optimize cash position and working capital efficiency.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Cash Forecasting</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Working Capital Analysis</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Growth Planning</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 28. Custom Accounting Solutions -->
+                                <div class="col-xl-3 col-lg-4 col-md-6" data-cue="slideInUp" data-delay="300">
+                                    <div class="gas-card">
+                                        <h4><i class="ri-settings-4-line" style="color:#7ED957;margin-right:8px;"></i>Custom Accounting Solutions</h4>
+                                        <p>Tailored accounting support designed around your unique US business needs and workflows.</p>
+                                        <div class="gas-divider"></div>
+                                        <ul class="gas-list">
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Needs Assessment</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Custom Workflows</span></li>
+                                            <li><img src="assets/img/icons/check.svg" alt="check" class="gas-tick"><span>Scalable Solutions</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- ============================================================
+                         SECTION 6: OUR PROCESS (5 Steps)
+                         ============================================================ -->
+                    <div class="gas-process-section gas-category-alt pb-90" style="padding-top:100px; border-top: 1px solid rgba(0,149,130,0.1);">
+                        <div class="container style-two">
                             <div class="row mb-60">
                                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
                                     <span class="gas-section-tag">Our Process</span>
                                     <h2 class="section-title style-one fw-semibold title-anim mb-20">
-                                        Five-Step Global Accounting Framework
+                                        How We Work With US Businesses
                                     </h2>
-                                    <p class="fs-xxl-18">Streamlined process for seamless international accounting and compliance management.</p>
+                                    <p class="fs-xxl-18">A proven five-step framework to onboard, manage, and grow your accounting operations seamlessly.</p>
                                 </div>
                             </div>
 
@@ -540,54 +938,55 @@
                                 <div class="col-lg-2-5 col-md-6" data-cue="slideInUp" data-delay="0">
                                     <div class="process-step">
                                         <div class="process-step-icon">1</div>
-                                        <h4>Assessment</h4>
-                                        <p>Understand your global footprint, jurisdictions, currencies, and compliance requirements.</p>
+                                        <h4>Discovery</h4>
+                                        <p>Understand your US business structure, accounting needs, and compliance requirements.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-2-5 col-md-6" data-cue="slideInUp" data-delay="100">
                                     <div class="process-step">
                                         <div class="process-step-icon">2</div>
-                                        <h4>Documentation</h4>
-                                        <p>Collect and organize cross-border financial records, invoices, and transaction documents.</p>
+                                        <h4>Setup</h4>
+                                        <p>Configure QuickBooks, establish chart of accounts, and set up reporting workflows.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-2-5 col-md-6" data-cue="slideInUp" data-delay="200">
                                     <div class="process-step">
                                         <div class="process-step-icon">3</div>
-                                        <h4>Strategy</h4>
-                                        <p>Develop compliance and tax optimization strategy for all operating jurisdictions.</p>
+                                        <h4>Execution</h4>
+                                        <p>Daily bookkeeping, payroll processing, reconciliations, and compliance management.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-2-5 col-md-6" data-cue="slideInUp" data-delay="300">
                                     <div class="process-step">
                                         <div class="process-step-icon">4</div>
-                                        <h4>Execution</h4>
-                                        <p>File returns, manage compliance deadlines, and execute international tax strategies.</p>
+                                        <h4>Reporting</h4>
+                                        <p>Monthly financial statements, MIS dashboards, and tax-ready books delivered on time.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-2-5 col-md-6" data-cue="slideInUp" data-delay="400">
                                     <div class="process-step">
                                         <div class="process-step-icon">5</div>
-                                        <h4>Support</h4>
-                                        <p>Ongoing monitoring, updates, and proactive guidance throughout the fiscal year.</p>
+                                        <h4>Advisory</h4>
+                                        <p>Ongoing strategic support, tax planning, and proactive growth advisory throughout the year.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Process Section End -->
 
-                    <!-- Why Choose Us Section -->
-                    <div class="pt-90 pb-90">
+
+                    <!-- ============================================================
+                         SECTION 7: WHY CHOOSE US
+                         ============================================================ -->
+                    <div class="gas-category-section">
                         <div class="container style-two">
-
                             <div class="row mb-60">
                                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
                                     <span class="gas-section-tag">Why Eleware</span>
                                     <h2 class="section-title style-one fw-semibold title-anim mb-20">
-                                        Global Expertise, Local Touch
+                                        Your Trusted US Accounting Partner
                                     </h2>
-                                    <p class="fs-xxl-18">ICAI-certified accountants with deep international experience handling Indian and global businesses.</p>
+                                    <p class="fs-xxl-18">Experienced professionals with deep US accounting knowledge, delivering accurate, compliant, and strategic financial services.</p>
                                 </div>
                             </div>
 
@@ -595,40 +994,41 @@
                                 <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-delay="0">
                                     <div class="benefit-card">
                                         <span class="icon"><i class="ri-team-line"></i></span>
-                                        <h4>ICAI-Qualified Expertise</h4>
-                                        <p>All accounting work overseen by ICAI-registered Chartered Accountants with international accounting experience.</p>
+                                        <h4>US Accounting Expertise</h4>
+                                        <p>Professionals experienced in US GAAP, IRS regulations, federal & state tax codes, and multi-state compliance requirements.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-delay="100">
                                     <div class="benefit-card">
-                                        <span class="icon"><i class="ri-global-line"></i></span>
-                                        <h4>Multi-Region Experience</h4>
-                                        <p>Proven expertise managing businesses with operations in US, UK, Middle East, Europe, and Southeast Asia.</p>
+                                        <span class="icon"><i class="ri-calculator-line"></i></span>
+                                        <h4>QuickBooks Certified</h4>
+                                        <p>Certified QuickBooks ProAdvisors managing your books with best practices, automation, and custom reporting configured for your needs.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6" data-cue="slideInUp" data-delay="200">
                                     <div class="benefit-card">
                                         <span class="icon"><i class="ri-secure-payment-line"></i></span>
-                                        <h4>Data Security</h4>
-                                        <p>We protect every client record with secure handling, encrypted storage, and strict confidentiality.</p>
+                                        <h4>Data Security & Confidentiality</h4>
+                                        <p>Enterprise-grade data protection with encrypted storage, secure handling, and strict confidentiality protocols for every client.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Why Choose Us Section End -->
 
-                    <!-- FAQ Section -->
-                    <div class="gas-faq-section pt-60 pb-90" style="background: linear-gradient(135deg, #f9fffe 0%, #f0fbf9 100%); border-top: 1px solid rgba(0,149,130,0.1);">
+
+                    <!-- ============================================================
+                         SECTION 8: FAQ
+                         ============================================================ -->
+                    <div class="gas-faq-section gas-category-alt pb-90" style="padding-top:100px; border-top: 1px solid rgba(0,149,130,0.1);">
                         <div class="container style-two">
-
                             <div class="row mb-60">
                                 <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 text-center" data-cue="slideInDown">
                                     <span class="gas-section-tag">Common Questions</span>
                                     <h2 class="section-title style-one fw-semibold title-anim mb-20">
                                         Frequently Asked Questions
                                     </h2>
-                                    <p class="fs-xxl-18">Quick answers to help you understand our global accounting service.</p>
+                                    <p class="fs-xxl-18">Quick answers to help you understand our US accounting services.</p>
                                 </div>
                             </div>
 
@@ -637,51 +1037,51 @@
 
                                     <div class="faq-item active" data-cue="slideInUp" data-delay="0">
                                         <div class="faq-question">
-                                            <span>Which countries do you support?</span>
+                                            <span>What accounting software do you work with?</span>
                                             <i class="ri-arrow-down-s-line"></i>
                                         </div>
                                         <div class="faq-answer">
-                                            <p>We specialize in India-US, India-UK, India-Middle East, and India-Southeast Asia corridors. For other regions, we have a network of international partners to ensure compliance and reporting.</p>
+                                            <p>We primarily work with QuickBooks Online and QuickBooks Desktop. We also support Xero, FreshBooks, and other popular US accounting platforms based on your business needs.</p>
                                         </div>
                                     </div>
 
                                     <div class="faq-item" data-cue="slideInUp" data-delay="100">
                                         <div class="faq-question">
-                                            <span>How do you handle currency conversion?</span>
+                                            <span>How do you handle payroll for multi-state employees?</span>
                                             <i class="ri-arrow-down-s-line"></i>
                                         </div>
                                         <div class="faq-answer">
-                                            <p>We use live FX rates for accurate conversion, track FX gains and losses separately, and provide consolidated reporting in your base currency. We can also advise on hedging strategies to minimize currency risk.</p>
+                                            <p>We manage multi-state payroll with accurate state tax withholdings, SUTA/FUTA compliance, and timely filings for each state. We handle state registrations and ensure you remain compliant across all operating states.</p>
                                         </div>
                                     </div>
 
                                     <div class="faq-item" data-cue="slideInUp" data-delay="200">
                                         <div class="faq-question">
-                                            <span>What is transfer pricing compliance?</span>
+                                            <span>Can you help with catch-up bookkeeping if my books are behind?</span>
                                             <i class="ri-arrow-down-s-line"></i>
                                         </div>
                                         <div class="faq-answer">
-                                            <p>Transfer pricing ensures inter-company transactions between entities in different countries are priced at arm's length. We prepare required documentation, analysis, and filing to ensure compliance with local tax authorities.</p>
+                                            <p>Absolutely! Our catch-up and clean-up service is specifically designed for businesses with backlogged or inaccurate books. We'll bring your financials current, correct errors, and establish proper processes going forward.</p>
                                         </div>
                                     </div>
 
                                     <div class="faq-item" data-cue="slideInUp" data-delay="300">
                                         <div class="faq-question">
-                                            <span>Can you handle multiple currencies in real-time?</span>
+                                            <span>Do you coordinate with my CPA for tax filing?</span>
                                             <i class="ri-arrow-down-s-line"></i>
                                         </div>
                                         <div class="faq-answer">
-                                            <p>Yes, we integrate live currency feeds and provide real-time consolidated reporting across all operating currencies. All transactions are tracked in their original currency and converted for consolidation.</p>
+                                            <p>Yes, we prepare tax-ready financials and work directly with your CPA during tax season. We provide all necessary schedules, adjustments, and supporting documentation to make the filing process seamless.</p>
                                         </div>
                                     </div>
 
                                     <div class="faq-item" data-cue="slideInUp" data-delay="400">
                                         <div class="faq-question">
-                                            <span>What's your turnaround time for international filings?</span>
+                                            <span>What's the difference between Controller and Virtual CFO support?</span>
                                             <i class="ri-arrow-down-s-line"></i>
                                         </div>
                                         <div class="faq-answer">
-                                            <p>Our 24/7 global team ensures quick turnarounds. Most filing and compliance work is completed within 5-10 business days depending on jurisdiction-specific requirements and document availability.</p>
+                                            <p>Controller services focus on day-to-day financial management, month-end close, and compliance oversight. Virtual CFO services provide strategic financial leadership including fundraising support, board-level reporting, KPI development, and growth planning.</p>
                                         </div>
                                     </div>
 
@@ -689,15 +1089,17 @@
                             </div>
                         </div>
                     </div>
-                    <!-- FAQ Section End -->
 
-                    <!-- CTA Section -->
+
+                    <!-- ============================================================
+                         SECTION 9: CTA
+                         ============================================================ -->
                     <div class="pt-90 pb-90">
                         <div class="container style-two">
                             <div class="row">
                                 <div class="col-lg-8 offset-lg-2 text-center" data-cue="slideInUp">
-                                    <h2 class="section-title style-one fw-semibold mb-35">Ready to Go Global?</h2>
-                                    <p class="fs-xxl-18 mb-40">Let's discuss your international expansion and build a compliant, efficient accounting structure for your global business.</p>
+                                    <h2 class="section-title style-one fw-semibold mb-35">Ready to Streamline Your US Accounting?</h2>
+                                    <p class="fs-xxl-18 mb-40">Let's discuss how Eleware can handle your bookkeeping, payroll, tax compliance, and financial reporting — so you can focus on growing your business.</p>
                                     <a href="appointment.html" class="btn style-one d-inline-flex align-items-center">
                                         <span class="btn-icon-one d-flex flex-column align-items-center justify-content-center rounded-circle transition"><img src="assets/img/icons/right-arrow.svg" alt="Icon"></span>
                                         <span class="btn-text fw-bold d-flex flex-column align-items-center justify-content-center transition">Book Your Free Consultation</span>
@@ -711,7 +1113,6 @@
 
                 </div><!-- .bg-albastor end -->
 
-                <!-- Footer -->
                 <!-- Footer Section Start -->
                 <footer class="footer-area style-one">
                     <div class="container style-one">
