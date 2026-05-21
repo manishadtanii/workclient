@@ -11,6 +11,29 @@
   background-color: #043138;
 }
 
+/* Navbar Flag Icons */
+.navbar-flags {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.navbar-flag-icon {
+  height: 18px;
+  width: auto;
+  margin-left: 6px;
+  vertical-align: middle;
+  border-radius: 2px;
+  object-fit: contain;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.navbar-flag-icon:first-child {
+  margin-left: 0;
+}
+.navbar-flag-icon:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
 .navbar-area {
   z-index: 999;
   transition: 1s;
